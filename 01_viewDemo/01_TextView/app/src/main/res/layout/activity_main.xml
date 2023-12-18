@@ -1,18 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
+<!--    TextView 基本使用 -->
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="#FF5599"-->
+<!--        android:id="@+id/tv_1"-->
+<!--        android:text="@string/tv_text"-->
+<!--        android:textColor="#0000FF"-->
+<!--        android:gravity="center">-->
+<!--    </TextView>-->
+
+<!--    TextView 带阴影的 -->
+<!--    <TextView-->
+<!--        android:layout_width="600px"-->
+<!--        android:layout_height="600px"-->
+<!--        android:background="@color/teal_200"-->
+<!--        android:text="哈哈哈"-->
+<!--        android:textSize="44sp"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:shadowColor="#FF0000"-->
+<!--        android:shadowRadius="3.0"-->
+<!--        android:shadowDx="10.0"-->
+<!--        android:shadowDy="10.0" >-->
+<!--    </TextView>-->
+
+<!--    TextView 跑马灯效果 -->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!😄"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="600px"
+        android:layout_height="600px"
+        android:background="@color/teal_200"
+        android:text="哈哈哈、哈哈哈、哈哈哈、哈哈哈、哈哈哈、哈哈哈、哈哈哈、哈哈哈、"
+        android:textSize="44sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:shadowColor="#FF0000"
+        android:shadowRadius="3.0"
+        android:shadowDx="10.0"
+        android:shadowDy="10.0"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:clickable="true"
+        >
+        <requestFocus/>
+    </TextView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!--    <com.example.a01_textview.MyTextView-->
+<!--        android:layout_width="600px"-->
+<!--        android:layout_height="600px"-->
+<!--        android:background="@color/teal_200"-->
+<!--        android:text="哈哈哈、哈哈哈、哈哈哈、哈哈哈、哈哈哈、哈哈哈、哈哈哈、哈哈哈、"-->
+<!--        android:textSize="44sp"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:shadowColor="#FF0000"-->
+<!--        android:shadowRadius="3.0"-->
+<!--        android:shadowDx="10.0"-->
+<!--        android:shadowDy="10.0"-->
+<!--        android:singleLine="true"-->
+<!--        android:ellipsize="marquee"-->
+<!--        android:marqueeRepeatLimit="marquee_forever"-->
+<!--        android:focusable="true"-->
+<!--        android:focusableInTouchMode="true"-->
+<!--        android:clickable="true"-->
+<!--        >-->
+<!--    </com.example.a01_textview.MyTextView>-->
+
+</LinearLayout>
