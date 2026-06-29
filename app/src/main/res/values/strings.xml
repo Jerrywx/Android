@@ -11,4 +11,6 @@
     <string name="header_star">收藏</string>
     <string name="header_plus">添加</string>
     <string name="search_hint">搜索</string>
+
+    <string name="android_study_title">Android</string>
 </resources>
