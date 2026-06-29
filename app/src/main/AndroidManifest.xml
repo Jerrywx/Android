@@ -34,6 +34,40 @@
         <activity
             android:name=".RecyclerViewDemoActivityPro"
             android:exported="false" />
+        <activity
+            android:name=".GalleryDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatDemoActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".StickyHeaderDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NestedHomeDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ConcatAdapterDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TimelineDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FastScrollerDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VideoFeedDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TagFlowDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchFilterDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoopBannerDemoActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

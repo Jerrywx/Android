@@ -76,4 +76,32 @@
     <color name="pro_action_bar_text">#FFFFFFFF</color>
     <color name="pro_layout_toggle_bg">#FFEDF1F5</color>
     <color name="pro_layout_toggle_selected">#FFFFFFFF</color>
+
+    <color name="demo_bg">#FFF5F7FB</color>
+    <color name="demo_card_bg">#FFFFFFFF</color>
+    <color name="demo_title">#FF1F2933</color>
+    <color name="demo_subtitle">#FF6B7280</color>
+    <color name="demo_hint">#FF9AA3B2</color>
+    <color name="demo_accent">#FF07C160</color>
+    <color name="demo_divider">#FFE5E7EB</color>
+    <color name="demo_index_bg">#FFF5F7FB</color>
+    <color name="demo_index_card">#FFFFFFFF</color>
+    <color name="demo_index_icon_bg">#FFEAF8F0</color>
+    <color name="demo_chat_bg">#FFEDEDED</color>
+    <color name="demo_chat_bubble_sent">#FF95EC69</color>
+    <color name="demo_chat_bubble_received">#FFFFFFFF</color>
+    <color name="demo_sticky_bg">#FFF2F2F7</color>
+    <color name="demo_sticky_header_bg">#FFEAEAEF</color>
+    <color name="demo_sticky_header_text">#FF6B7280</color>
+    <color name="demo_timeline_line">#FFD8DEE6</color>
+    <color name="demo_timeline_dot">#FF07C160</color>
+    <color name="demo_fastscroll_bg">#FFFFFFFF</color>
+    <color name="demo_fastscroll_index">#FF07C160</color>
+    <color name="demo_fastscroll_bubble">#CC1F2933</color>
+    <color name="demo_video_bg">#FF000000</color>
+    <color name="demo_tag_bg">#FFEAF8F0</color>
+    <color name="demo_tag_text">#FF07A152</color>
+    <color name="demo_tag_bg_selected">#FF07C160</color>
+    <color name="demo_tag_text_selected">#FFFFFFFF</color>
+    <color name="demo_search_highlight">#FFFFE58F</color>
 </resources>

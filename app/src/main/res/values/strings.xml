@@ -37,4 +37,46 @@
     <string name="rvpro_selection_delete">删除</string>
     <string name="rvpro_selection_cancel">取消</string>
     <string name="rvpro_long_press_hint">长按进入多选 · 点击 ♥ 单独更新</string>
+
+    <string name="demo_gallery">横向卡片画廊（SnapHelper）</string>
+    <string name="demo_chat">聊天气泡列表（stackFromEnd）</string>
+    <string name="demo_sticky">粘性 Header（ItemDecoration）</string>
+    <string name="demo_nested">嵌套横滑首页</string>
+    <string name="demo_concat">ConcatAdapter 拼接</string>
+    <string name="demo_timeline">时间轴</string>
+    <string name="demo_fast_scroller">通讯录 A-Z 索引</string>
+    <string name="demo_video_feed">全屏 Snap Feed</string>
+    <string name="demo_tag_flow">标签流</string>
+    <string name="demo_search_filter">搜索高亮过滤</string>
+
+    <string name="gallery_title">横向卡片画廊</string>
+    <string name="gallery_hint">PagerSnapHelper 吸附 · 缩放视差动画</string>
+    <string name="chat_demo_title">聊天气泡</string>
+    <string name="chat_demo_hint">stackFromEnd · 新消息自动贴底</string>
+    <string name="chat_demo_send_a">我</string>
+    <string name="chat_demo_send_b">Bot</string>
+    <string name="sticky_title">粘性 Header</string>
+    <string name="sticky_hint">ItemDecoration 自绘顶部分组标题</string>
+    <string name="nested_title">嵌套横滑首页</string>
+    <string name="nested_hint">外层纵向 · 内层多个横向 RecyclerView</string>
+    <string name="concat_title">ConcatAdapter</string>
+    <string name="concat_hint">Header + 多 Section + Footer 拼接为单一列表</string>
+    <string name="timeline_title">时间轴</string>
+    <string name="timeline_hint">ItemDecoration 画节点与连接线</string>
+    <string name="fast_scroller_title">通讯录 A-Z</string>
+    <string name="fast_scroller_hint">右侧字母索引 · 拖动跳转</string>
+    <string name="video_feed_title">全屏 Snap Feed</string>
+    <string name="video_feed_hint">PagerSnapHelper 满屏吸附 · 自动播放动画</string>
+    <string name="tag_flow_title">标签流</string>
+    <string name="tag_flow_hint">FlowLayoutManager · 自动换行</string>
+    <string name="search_filter_title">搜索高亮</string>
+    <string name="search_filter_hint">输入关键字实时过滤并高亮</string>
+    <string name="search_filter_input_hint">输入关键字搜索</string>
+
+    <string name="demo_loop_banner">无限轮播 Banner</string>
+    <string name="loop_banner_title">无限轮播</string>
+    <string name="loop_banner_hint">Int.MAX_VALUE · 自动播放 · 指示点联动</string>
+    <string name="loop_banner_status">第 %1$d / %2$d 张 · %3$s</string>
+    <string name="loop_banner_pause">暂停自动轮播</string>
+    <string name="loop_banner_resume">恢复自动轮播</string>
 </resources>
