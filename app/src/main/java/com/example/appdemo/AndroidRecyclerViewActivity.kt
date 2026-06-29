@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class AndroidStudyActivity : AppCompatActivity() {
+class AndroidRecyclerViewActivity : AppCompatActivity() {
 
     private data class Entry(val title: String, val subtitle: String, val target: Class<*>)
 

@@ -26,7 +26,7 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".AndroidStudyActivity"
+            android:name=".AndroidRecyclerViewActivity"
             android:exported="false" />
         <activity
             android:name=".RecyclerViewDemoActivity"

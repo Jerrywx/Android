@@ -11,7 +11,7 @@ class ContactsFragment : Fragment(R.layout.fragment_contacts) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<ImageButton>(R.id.btn_contacts_plus).setOnClickListener {
-            startActivity(Intent(requireContext(), AndroidStudyActivity::class.java))
+            startActivity(Intent(requireContext(), AndroidRecyclerViewActivity::class.java))
         }
     }
 }
