@@ -1,6 +1,8 @@
 package com.example.appdemo
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -21,5 +23,8 @@ class AndroidStudyActivity : AppCompatActivity() {
         }
 
         findViewById<ImageButton>(R.id.btn_android_study_back).setOnClickListener { finish() }
+        findViewById<Button>(R.id.btn_recycler_view).setOnClickListener {
+            startActivity(Intent(this, RecyclerViewDemoActivity::class.java))
+        }
     }
 }

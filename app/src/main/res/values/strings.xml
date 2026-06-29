@@ -13,4 +13,13 @@
     <string name="search_hint">搜索</string>
 
     <string name="android_study_title">Android</string>
+    <string name="android_study_recycler_view">RecyclerView</string>
+    <string name="rv_demo_title">RecyclerView Demo</string>
+    <string name="rv_demo_reset">重置</string>
+    <string name="rv_demo_swipe_hint">左右滑动删除 · 长按拖拽排序 · 点击查看</string>
+    <string name="rv_demo_section_banner">每日精选</string>
+    <string name="rv_demo_section_banner_sub">向右滑动浏览更多卡片</string>
+    <string name="rv_demo_section_grid">推荐内容</string>
+    <string name="rv_demo_section_grid_sub">长按拖拽排序，左右滑动删除</string>
+    <string name="rv_demo_footer">— 到底啦 —</string>
 </resources>

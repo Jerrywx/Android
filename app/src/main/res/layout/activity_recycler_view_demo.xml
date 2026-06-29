@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/android_study_root"
+    android:id="@+id/recycler_demo_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_contacts"
+    android:background="@color/rv_bg"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/android_study_toolbar"
+        android:id="@+id/recycler_demo_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/header_bg"
@@ -23,7 +23,7 @@
             android:paddingHorizontal="4dp">
 
             <ImageButton
-                android:id="@+id/btn_android_study_back"
+                android:id="@+id/btn_recycler_demo_back"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
@@ -36,23 +36,41 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:paddingHorizontal="8dp"
-                android:text="@string/android_study_title"
+                android:text="@string/rv_demo_title"
                 android:textColor="@color/header_title"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
-            <View
-                android:layout_width="40dp"
-                android:layout_height="40dp" />
+            <TextView
+                android:id="@+id/btn_recycler_demo_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingHorizontal="12dp"
+                android:text="@string/rv_demo_reset"
+                android:textColor="@color/rv_accent"
+                android:textSize="14sp" />
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
 
-    <Button
-        android:id="@+id/btn_recycler_view"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/android_study_recycler_view"
-        android:textAllCaps="false" />
+        android:layout_height="wrap_content"
+        android:background="@color/header_bg"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="10dp"
+        android:text="@string/rv_demo_swipe_hint"
+        android:textColor="@color/rv_subtitle"
+        android:textSize="12sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_demo_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        android:scrollbars="vertical" />
 </LinearLayout>

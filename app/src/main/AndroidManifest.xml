@@ -28,6 +28,9 @@
         <activity
             android:name=".AndroidStudyActivity"
             android:exported="false" />
+        <activity
+            android:name=".RecyclerViewDemoActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

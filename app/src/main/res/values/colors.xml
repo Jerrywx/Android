@@ -31,4 +31,29 @@
     <color name="bg_contacts">#FFFFF5E1</color>
     <color name="bg_discover">#FFE1ECFF</color>
     <color name="bg_me">#FFF5E1F0</color>
+
+    <color name="rv_bg">#FFF2F4F8</color>
+    <color name="rv_card_bg">#FFFFFFFF</color>
+    <color name="rv_title">#FF1F2933</color>
+    <color name="rv_subtitle">#FF6B7280</color>
+    <color name="rv_hint">#FF9AA3B2</color>
+    <color name="rv_accent">#FF07C160</color>
+    <color name="rv_divider">#FFE5E7EB</color>
+    <color name="rv_tag_bg">#FFEAF8F0</color>
+    <color name="rv_tag_text">#FF07A152</color>
+    <color name="rv_banner_1_start">#FF6A8DFF</color>
+    <color name="rv_banner_1_end">#FF8E66FF</color>
+    <color name="rv_banner_2_start">#FFFF8A65</color>
+    <color name="rv_banner_2_end">#FFFF5E8C</color>
+    <color name="rv_banner_3_start">#FF22C1C3</color>
+    <color name="rv_banner_3_end">#FF3CCB8A</color>
+    <color name="rv_banner_4_start">#FFFFB94B</color>
+    <color name="rv_banner_4_end">#FFFF7E5F</color>
+    <color name="rv_avatar_1">#FFFFD8A8</color>
+    <color name="rv_avatar_2">#FFB8E0FF</color>
+    <color name="rv_avatar_3">#FFFFC8DD</color>
+    <color name="rv_avatar_4">#FFC3F0CA</color>
+    <color name="rv_avatar_5">#FFE0D4FF</color>
+    <color name="rv_avatar_text">#FF1F2933</color>
+    <color name="rv_swipe_bg">#FFFF4D4F</color>
 </resources>
