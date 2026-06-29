@@ -2,4 +2,33 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="tab_bg">#FFEDEDED</color>
+    <color name="tab_divider">#FFD0D0D0</color>
+    <color name="tab_selected">#FF07C160</color>
+    <color name="tab_unselected">#FF7F7F7F</color>
+
+    <color name="bg_wechat">#FFEDEDED</color>
+    <color name="msg_row_bg">#FFFFFFFF</color>
+    <color name="msg_divider">#FFE5E5E5</color>
+    <color name="msg_title">#FF111111</color>
+    <color name="msg_preview">#FF888888</color>
+    <color name="msg_time">#FFB2B2B2</color>
+    <color name="header_bg">#FFEDEDED</color>
+    <color name="header_title">#FF111111</color>
+    <color name="header_icon">#FF111111</color>
+    <color name="search_bg">#FFFFFFFF</color>
+    <color name="search_hint">#FF9A9A9A</color>
+
+    <color name="chat_bg">#FFEDEDED</color>
+    <color name="bubble_received">#FFFFFFFF</color>
+    <color name="bubble_sent">#FF95EC69</color>
+    <color name="chat_text">#FF111111</color>
+    <color name="chat_time">#FF9A9A9A</color>
+    <color name="input_bar_bg">#FFF7F7F7</color>
+    <color name="input_field_bg">#FFFFFFFF</color>
+
+    <color name="bg_contacts">#FFFFF5E1</color>
+    <color name="bg_discover">#FFE1ECFF</color>
+    <color name="bg_me">#FFF5E1F0</color>
 </resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/tab_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/tab_bg"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/tab_wechat"
+            style="@style/TabItem">
+
+            <ImageView
+                android:id="@+id/tab_wechat_icon"
+                style="@style/TabIcon"
+                android:src="@drawable/ic_tab_wechat" />
+
+            <TextView
+                android:id="@+id/tab_wechat_text"
+                style="@style/TabText"
+                android:text="@string/tab_wechat" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_contacts"
+            style="@style/TabItem">
+
+            <ImageView
+                android:id="@+id/tab_contacts_icon"
+                style="@style/TabIcon"
+                android:src="@drawable/ic_tab_contacts" />
+
+            <TextView
+                android:id="@+id/tab_contacts_text"
+                style="@style/TabText"
+                android:text="@string/tab_contacts" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_discover"
+            style="@style/TabItem">
+
+            <ImageView
+                android:id="@+id/tab_discover_icon"
+                style="@style/TabIcon"
+                android:src="@drawable/ic_tab_discover" />
+
+            <TextView
+                android:id="@+id/tab_discover_text"
+                style="@style/TabText"
+                android:text="@string/tab_discover" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_me"
+            style="@style/TabItem">
+
+            <ImageView
+                android:id="@+id/tab_me_icon"
+                style="@style/TabIcon"
+                android:src="@drawable/ic_tab_me" />
+
+            <TextView
+                android:id="@+id/tab_me_text"
+                style="@style/TabText"
+                android:text="@string/tab_me" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>
