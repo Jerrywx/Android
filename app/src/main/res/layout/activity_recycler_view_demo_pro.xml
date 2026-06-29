@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pro_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pro_bg"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/pro_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/header_bg"
+        app:contentInsetStart="0dp"
+        app:contentInsetEnd="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="4dp">
+
+            <ImageButton
+                android:id="@+id/btn_pro_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/chat_back"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingHorizontal="8dp"
+                android:text="@string/rvpro_title"
+                android:textColor="@color/header_title"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/pro_layout_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_pro_layout_toggle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <ImageView
+                    android:id="@+id/pro_toggle_list"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_pro_layout_seg"
+                    android:contentDescription="@string/rvpro_layout_list"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_list" />
+
+                <ImageView
+                    android:id="@+id/pro_toggle_grid"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_pro_layout_seg"
+                    android:contentDescription="@string/rvpro_layout_grid"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_grid" />
+
+                <ImageView
+                    android:id="@+id/pro_toggle_stagger"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_pro_layout_seg"
+                    android:contentDescription="@string/rvpro_layout_stagger"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_stagger" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/header_bg"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/pro_chip_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="10dp" />
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/pro_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pro_action_bar_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/pro_action_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/pro_action_bar_text"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pro_action_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:text="@string/rvpro_selection_delete"
+            android:textColor="@color/pro_action_bar_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/pro_action_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:text="@string/rvpro_selection_cancel"
+            android:textColor="@color/pro_action_bar_text"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/pro_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pro_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingHorizontal="12dp"
+            android:paddingBottom="16dp"
+            android:scrollbars="vertical" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

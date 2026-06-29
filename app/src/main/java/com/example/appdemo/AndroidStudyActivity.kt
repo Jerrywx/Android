@@ -26,5 +26,8 @@ class AndroidStudyActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btn_recycler_view).setOnClickListener {
             startActivity(Intent(this, RecyclerViewDemoActivity::class.java))
         }
+        findViewById<Button>(R.id.btn_recycler_view_pro).setOnClickListener {
+            startActivity(Intent(this, RecyclerViewDemoActivityPro::class.java))
+        }
     }
 }

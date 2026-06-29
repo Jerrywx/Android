@@ -14,6 +14,7 @@
 
     <string name="android_study_title">Android</string>
     <string name="android_study_recycler_view">RecyclerView</string>
+    <string name="android_study_recycler_view_pro">RecyclerViewPro</string>
     <string name="rv_demo_title">RecyclerView Demo</string>
     <string name="rv_demo_reset">重置</string>
     <string name="rv_demo_swipe_hint">左右滑动删除 · 长按拖拽排序 · 点击查看</string>
@@ -22,4 +23,18 @@
     <string name="rv_demo_section_grid">推荐内容</string>
     <string name="rv_demo_section_grid_sub">长按拖拽排序，左右滑动删除</string>
     <string name="rv_demo_footer">— 到底啦 —</string>
+
+    <string name="rvpro_title">RecyclerView Pro</string>
+    <string name="rvpro_chip_all">全部</string>
+    <string name="rvpro_chip_starred">收藏</string>
+    <string name="rvpro_chip_recent">最近</string>
+    <string name="rvpro_layout_list">列表</string>
+    <string name="rvpro_layout_grid">网格</string>
+    <string name="rvpro_layout_stagger">瀑布流</string>
+    <string name="rvpro_footer_loading">加载中…</string>
+    <string name="rvpro_footer_done">— 没有更多了 —</string>
+    <string name="rvpro_selection_count">已选 %1$d 项</string>
+    <string name="rvpro_selection_delete">删除</string>
+    <string name="rvpro_selection_cancel">取消</string>
+    <string name="rvpro_long_press_hint">长按进入多选 · 点击 ♥ 单独更新</string>
 </resources>

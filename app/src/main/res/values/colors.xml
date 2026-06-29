@@ -56,4 +56,24 @@
     <color name="rv_avatar_5">#FFE0D4FF</color>
     <color name="rv_avatar_text">#FF1F2933</color>
     <color name="rv_swipe_bg">#FFFF4D4F</color>
+
+    <color name="pro_bg">#FFF5F7FB</color>
+    <color name="pro_chip_bg">#FFFFFFFF</color>
+    <color name="pro_chip_bg_selected">#FF07C160</color>
+    <color name="pro_chip_text">#FF4B5563</color>
+    <color name="pro_chip_text_selected">#FFFFFFFF</color>
+    <color name="pro_chip_stroke">#FFE5E7EB</color>
+    <color name="pro_card_bg">#FFFFFFFF</color>
+    <color name="pro_card_selected_bg">#FFEAF8F0</color>
+    <color name="pro_card_stroke">#00000000</color>
+    <color name="pro_card_stroke_selected">#FF07C160</color>
+    <color name="pro_title">#FF1F2933</color>
+    <color name="pro_subtitle">#FF6B7280</color>
+    <color name="pro_hint">#FF9AA3B2</color>
+    <color name="pro_accent">#FF07C160</color>
+    <color name="pro_like">#FFFF4D6D</color>
+    <color name="pro_action_bar_bg">#FF07C160</color>
+    <color name="pro_action_bar_text">#FFFFFFFF</color>
+    <color name="pro_layout_toggle_bg">#FFEDF1F5</color>
+    <color name="pro_layout_toggle_selected">#FFFFFFFF</color>
 </resources>

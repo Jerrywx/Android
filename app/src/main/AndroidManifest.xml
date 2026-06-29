@@ -31,6 +31,9 @@
         <activity
             android:name=".RecyclerViewDemoActivity"
             android:exported="false" />
+        <activity
+            android:name=".RecyclerViewDemoActivityPro"
+            android:exported="false" />
     </application>
 
 </manifest>
