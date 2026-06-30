@@ -18,6 +18,9 @@
     <string name="android_base_recycler_view_hint">RecyclerView 全部示例</string>
     <string name="android_base_view_pager2">ViewPager2</string>
     <string name="android_base_view_pager2_hint">ViewPager2 全部示例</string>
+    <string name="android_base_layout">布局 Layout</string>
+    <string name="android_base_layout_hint">四大布局实战演示</string>
+    <string name="android_layout_title">布局 Layout</string>
     <string name="android_view_pager2_title">ViewPager2</string>
 
     <string name="vp2_demo_onboarding">引导页 / Onboarding</string>

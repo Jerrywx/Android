@@ -95,6 +95,9 @@
         <activity
             android:name=".Vp2BannerDemoActivity"
             android:exported="false" />
+        <activity
+            android:name=".AndroidLayoutActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

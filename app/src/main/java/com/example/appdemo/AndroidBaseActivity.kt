@@ -42,6 +42,11 @@ class AndroidBaseActivity : AppCompatActivity() {
                 getString(R.string.android_base_view_pager2_hint),
                 AndroidViewPager2Activity::class.java,
             ),
+            Entry(
+                getString(R.string.android_base_layout),
+                getString(R.string.android_base_layout_hint),
+                AndroidLayoutActivity::class.java,
+            ),
         )
 
         val list = findViewById<RecyclerView>(R.id.android_base_list)
