@@ -28,7 +28,7 @@ class AndroidBaseActivity : AppCompatActivity() {
             v.setPadding(bars.left, bars.top, bars.right, bars.bottom)
             insets
         }
-
+        /// 点击返回按钮
         findViewById<ImageButton>(R.id.btn_android_base_back).setOnClickListener { finish() }
 
         val entries = listOf(
@@ -53,7 +53,7 @@ class AndroidBaseActivity : AppCompatActivity() {
                 CoroutineDemoActivity::class.java,
             ),
         )
-
+        /// 获取列表
         val list = findViewById<RecyclerView>(R.id.android_base_list)
         list.layoutManager = LinearLayoutManager(this)
         list.adapter = EntryAdapter(entries) { entry ->
@@ -65,6 +65,8 @@ class AndroidBaseActivity : AppCompatActivity() {
         private val items: List<Entry>,
         private val onClick: (Entry) -> Unit,
     ) : RecyclerView.Adapter<EntryAdapter.VH>() {
+
+        /// 主要作用是创建并返回一个新的 ViewHolder 实例
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
             val view = LayoutInflater.from(parent.context).inflate(R.layout.item_study_entry, parent, false)
             return VH(view)
