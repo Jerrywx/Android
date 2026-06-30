@@ -14,37 +14,34 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class AndroidBaseActivity : AppCompatActivity() {
+class AndroidViewPager2Activity : AppCompatActivity() {
 
     private data class Entry(val title: String, val subtitle: String, val target: Class<*>)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_android_base)
+        setContentView(R.layout.activity_android_view_pager2)
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.android_base_root)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.android_vp2_root)) { v, insets ->
             val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(bars.left, bars.top, bars.right, bars.bottom)
             insets
         }
 
-        findViewById<ImageButton>(R.id.btn_android_base_back).setOnClickListener { finish() }
+        findViewById<ImageButton>(R.id.btn_android_vp2_back).setOnClickListener { finish() }
 
         val entries = listOf(
-            Entry(
-                getString(R.string.android_base_recycler_view),
-                getString(R.string.android_base_recycler_view_hint),
-                AndroidRecyclerViewActivity::class.java,
-            ),
-            Entry(
-                getString(R.string.android_base_view_pager2),
-                getString(R.string.android_base_view_pager2_hint),
-                AndroidViewPager2Activity::class.java,
-            ),
+            Entry(getString(R.string.vp2_demo_onboarding), getString(R.string.vp2_demo_onboarding_hint), Vp2OnboardingDemoActivity::class.java),
+            Entry(getString(R.string.vp2_demo_tab), getString(R.string.vp2_demo_tab_hint), Vp2TabDemoActivity::class.java),
+            Entry(getString(R.string.vp2_demo_gallery), getString(R.string.vp2_demo_gallery_hint), Vp2GalleryDemoActivity::class.java),
+            Entry(getString(R.string.vp2_demo_vertical), getString(R.string.vp2_demo_vertical_hint), Vp2VerticalFeedDemoActivity::class.java),
+            Entry(getString(R.string.vp2_demo_card), getString(R.string.vp2_demo_card_hint), Vp2CardStackDemoActivity::class.java),
+            Entry(getString(R.string.vp2_demo_wizard), getString(R.string.vp2_demo_wizard_hint), Vp2WizardDemoActivity::class.java),
+            Entry(getString(R.string.vp2_demo_banner), getString(R.string.vp2_demo_banner_hint), Vp2BannerDemoActivity::class.java),
         )
 
-        val list = findViewById<RecyclerView>(R.id.android_base_list)
+        val list = findViewById<RecyclerView>(R.id.android_vp2_list)
         list.layoutManager = LinearLayoutManager(this)
         list.adapter = EntryAdapter(entries) { entry ->
             startActivity(Intent(this, entry.target))

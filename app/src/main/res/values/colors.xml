@@ -104,4 +104,30 @@
     <color name="demo_tag_bg_selected">#FF07C160</color>
     <color name="demo_tag_text_selected">#FFFFFFFF</color>
     <color name="demo_search_highlight">#FFFFE58F</color>
+
+    <color name="vp2_dot_active">#FF07C160</color>
+    <color name="vp2_dot_inactive">#FFD0D5DC</color>
+    <color name="vp2_onboarding_bg_1">#FF6A8DFF</color>
+    <color name="vp2_onboarding_bg_2">#FFFF7E5F</color>
+    <color name="vp2_onboarding_bg_3">#FF22C1C3</color>
+    <color name="vp2_onboarding_bg_4">#FFA18CD1</color>
+    <color name="vp2_btn_primary">#FF07C160</color>
+    <color name="vp2_btn_primary_text">#FFFFFFFF</color>
+    <color name="vp2_btn_secondary">#FFEDF1F5</color>
+    <color name="vp2_btn_secondary_text">#FF6B7280</color>
+    <color name="vp2_tab_text">#FF6B7280</color>
+    <color name="vp2_tab_text_selected">#FF07C160</color>
+    <color name="vp2_tab_indicator">#FF07C160</color>
+    <color name="vp2_wizard_bg">#FFF5F7FB</color>
+    <color name="vp2_wizard_card_bg">#FFFFFFFF</color>
+    <color name="vp2_wizard_step_bg">#FFEAF8F0</color>
+    <color name="vp2_wizard_step_done">#FF07C160</color>
+    <color name="vp2_wizard_step_pending">#FFD0D5DC</color>
+    <color name="vp2_video_overlay">#80000000</color>
+    <color name="vp2_onb_bg">#FF6A8DFF</color>
+    <color name="vp2_onb_title">#FFFFFFFF</color>
+    <color name="vp2_onb_subtitle">#CCFFFFFF</color>
+    <color name="vp2_card_bg">#FFFFFFFF</color>
+    <color name="vp2_mode_active">#FF07C160</color>
+    <color name="vp2_mode_inactive">#FF6B7280</color>
 </resources>

@@ -16,6 +16,86 @@
     <string name="android_base_title">Android 基础</string>
     <string name="android_base_recycler_view">RecyclerView</string>
     <string name="android_base_recycler_view_hint">RecyclerView 全部示例</string>
+    <string name="android_base_view_pager2">ViewPager2</string>
+    <string name="android_base_view_pager2_hint">ViewPager2 全部示例</string>
+    <string name="android_view_pager2_title">ViewPager2</string>
+
+    <string name="vp2_demo_onboarding">引导页 / Onboarding</string>
+    <string name="vp2_demo_onboarding_hint">页面切换 · 圆点指示器 · 按钮联动</string>
+    <string name="vp2_demo_tab">TabLayout + Fragment</string>
+    <string name="vp2_demo_tab_hint">TabLayoutMediator · 滑动联动</string>
+    <string name="vp2_demo_gallery">画廊 + PageTransformer</string>
+    <string name="vp2_demo_gallery_hint">深度 / 缩放 / 视差 三种动画切换</string>
+    <string name="vp2_demo_vertical">垂直短视频</string>
+    <string name="vp2_demo_vertical_hint">orientation=vertical · 全屏 Snap</string>
+    <string name="vp2_demo_card">卡片堆叠 / 缩放轮播</string>
+    <string name="vp2_demo_card_hint">offscreenPageLimit · 缩放动画</string>
+    <string name="vp2_demo_wizard">分步引导（禁用手势）</string>
+    <string name="vp2_demo_wizard_hint">isUserInputEnabled=false · 按钮翻页</string>
+    <string name="vp2_demo_banner">自动轮播 Banner</string>
+    <string name="vp2_demo_banner_hint">Lifecycle + Handler · 无限循环</string>
+
+    <string name="vp2_onboarding_skip">跳过</string>
+    <string name="vp2_onboarding_next">下一步</string>
+    <string name="vp2_onboarding_start">立即体验</string>
+    <string name="vp2_onboarding_page1_title">高效 RecyclerView</string>
+    <string name="vp2_onboarding_page1_sub">多类型 · 拖拽 · 滑动删除\n构建灵活的列表体验</string>
+    <string name="vp2_onboarding_page2_title">流畅 ViewPager2</string>
+    <string name="vp2_onboarding_page2_sub">支持垂直滑动 · 自定义 PageTransformer\n打造原生级动画</string>
+    <string name="vp2_onboarding_page3_title">便捷 Fragment</string>
+    <string name="vp2_onboarding_page3_sub">FragmentStateAdapter · 共享 ViewModel\n构建单 Activity 架构</string>
+    <string name="vp2_onboarding_page4_title">一切已就绪</string>
+    <string name="vp2_onboarding_page4_sub">开启你的 Android 学习之旅</string>
+
+    <string name="vp2_tab_title">TabLayout + Fragment</string>
+    <string name="vp2_tab_recommend">推荐</string>
+    <string name="vp2_tab_video">视频</string>
+    <string name="vp2_tab_music">音乐</string>
+    <string name="vp2_tab_topic">话题</string>
+    <string name="vp2_tab_news">资讯</string>
+    <string name="vp2_tab_live">直播</string>
+
+    <string name="vp2_gallery_title">画廊 + PageTransformer</string>
+    <string name="vp2_gallery_mode_depth">深度</string>
+    <string name="vp2_gallery_mode_zoom">缩放</string>
+    <string name="vp2_gallery_mode_parallax">视差</string>
+    <string name="vp2_gallery_hint">点击顶部切换动画 · 左右滑动浏览</string>
+
+    <string name="vp2_vertical_title">垂直短视频</string>
+    <string name="vp2_vertical_hint">上下滑动切换 · 双击点赞</string>
+    <string name="vp2_vertical_like">%1$d 赞</string>
+
+    <string name="vp2_card_title">卡片堆叠</string>
+    <string name="vp2_card_hint">左右滑动 · 多层卡片缩放</string>
+    <string name="vp2_card_button">查看详情</string>
+
+    <string name="vp2_wizard_title">分步引导</string>
+    <string name="vp2_wizard_step">第 %1$d / %2$d 步</string>
+    <string name="vp2_wizard_prev">上一步</string>
+    <string name="vp2_wizard_next">下一步</string>
+    <string name="vp2_wizard_finish">完成</string>
+    <string name="vp2_wizard_done">流程已完成</string>
+    <string name="vp2_wizard_step1_title">个人信息</string>
+    <string name="vp2_wizard_step1_sub">请填写你的昵称与简介</string>
+    <string name="vp2_wizard_step1_name">昵称</string>
+    <string name="vp2_wizard_step1_bio">个人简介</string>
+    <string name="vp2_wizard_step2_title">兴趣偏好</string>
+    <string name="vp2_wizard_step2_sub">选择你感兴趣的方向（至少 1 项）</string>
+    <string name="vp2_wizard_step3_title">通知设置</string>
+    <string name="vp2_wizard_step3_sub">选择想要接收的通知类型</string>
+    <string name="vp2_wizard_step3_msg">消息提醒</string>
+    <string name="vp2_wizard_step3_sound">声音</string>
+    <string name="vp2_wizard_step3_vibrate">震动</string>
+    <string name="vp2_wizard_step4_title">完成</string>
+    <string name="vp2_wizard_step4_sub">恭喜，初始化已完成，欢迎使用！</string>
+
+    <string name="vp2_banner_title">自动轮播 Banner</string>
+    <string name="vp2_banner_status">第 %1$d / %2$d 张 · %3$s</string>
+    <string name="vp2_banner_pause">暂停自动播放</string>
+    <string name="vp2_banner_resume">恢复自动播放</string>
+    <string name="vp2_banner_recommend">为你推荐</string>
+    <string name="vp2_banner_card_title">每日精选</string>
+    <string name="vp2_banner_card_sub">轻松学习 · 高效进阶</string>
     <string name="android_study_recycler_view">RecyclerView</string>
     <string name="android_study_recycler_view_pro">RecyclerViewPro</string>
     <string name="rv_demo_title">RecyclerView Demo</string>

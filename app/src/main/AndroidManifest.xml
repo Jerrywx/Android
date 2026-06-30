@@ -71,6 +71,30 @@
         <activity
             android:name=".LoopBannerDemoActivity"
             android:exported="false" />
+        <activity
+            android:name=".AndroidViewPager2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Vp2OnboardingDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Vp2TabDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Vp2GalleryDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Vp2VerticalFeedDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Vp2CardStackDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Vp2WizardDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Vp2BannerDemoActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

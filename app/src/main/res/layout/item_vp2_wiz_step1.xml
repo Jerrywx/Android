@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_vp2_card"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vp2_wizard_step1_title"
+        android:textColor="@color/demo_title"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/vp2_wizard_step1_sub"
+        android:textColor="@color/demo_subtitle"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/vp2_wizard_step1_name"
+        android:textColor="@color/demo_subtitle"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/vp2_wiz_name"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_vp2_input"
+        android:hint="例如：Android 学习者"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingHorizontal="14dp"
+        android:textColor="@color/demo_title"
+        android:textColorHint="@color/demo_hint"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/vp2_wizard_step1_bio"
+        android:textColor="@color/demo_subtitle"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/vp2_wiz_bio"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_vp2_input"
+        android:gravity="top|start"
+        android:hint="一段话介绍下你自己…"
+        android:inputType="textMultiLine"
+        android:padding="14dp"
+        android:textColor="@color/demo_title"
+        android:textColorHint="@color/demo_hint"
+        android:textSize="14sp" />
+</LinearLayout>

@@ -25,4 +25,21 @@
         <item name="android:textSize">11sp</item>
         <item name="android:textColor">@color/tab_text_color</item>
     </style>
+
+    <style name="Vp2TabTextStyle" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="Vp2ModeChip">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:background">@drawable/bg_vp2_mode</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingHorizontal">18dp</item>
+        <item name="android:textColor">@color/vp2_mode_text</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

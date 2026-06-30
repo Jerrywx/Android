@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/demo_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/demo_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_demo_toolbar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:text="@string/vp2_gallery_hint"
+        android:textColor="@color/demo_hint"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/vp2_gallery_mode_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/bg_vp2_mode_bar"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/vp2_gallery_mode_depth"
+            style="@style/Vp2ModeChip"
+            android:text="@string/vp2_gallery_mode_depth" />
+
+        <TextView
+            android:id="@+id/vp2_gallery_mode_zoom"
+            style="@style/Vp2ModeChip"
+            android:text="@string/vp2_gallery_mode_zoom" />
+
+        <TextView
+            android:id="@+id/vp2_gallery_mode_parallax"
+            style="@style/Vp2ModeChip"
+            android:text="@string/vp2_gallery_mode_parallax" />
+    </LinearLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp2_gallery_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        android:clipChildren="false"
+        android:clipToPadding="false" />
+
+    <LinearLayout
+        android:id="@+id/vp2_gallery_dots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="24dp"
+        android:orientation="horizontal" />
+</LinearLayout>
