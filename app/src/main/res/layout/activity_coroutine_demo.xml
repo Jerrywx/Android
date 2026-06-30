@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coroutine_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/demo_index_bg"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/demo_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/header_bg"
+        app:contentInsetStart="0dp"
+        app:contentInsetEnd="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="4dp">
+
+            <ImageButton
+                android:id="@+id/demo_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/chat_back"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/demo_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingHorizontal="8dp"
+                android:textColor="@color/header_title"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ===== 概述 ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🧵 Kotlin 多线程与协程"
+                    android:textColor="@color/demo_title"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Android 提供了多种多线程方案：传统 Thread / HandlerThread / AsyncTask，以及现代 Kotlin 协程。下面通过可运行的 Demo 逐一演示每种方案的用法和执行效果。"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="13sp"
+                    android:lineSpacingExtra="4dp" />
+            </LinearLayout>
+
+            <!-- ===== Demo 1: Thread 基础 ===== -->
+            <LinearLayout
+                android:id="@+id/section_thread"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📌 1. Thread 基础"
+                    android:textColor="@color/demo_title"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="通过 Thread 类和 Runnable 接口创建新线程，适合简单的后台任务。注意：Android 不允许在子线程更新 UI。"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="3dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btn_thread_demo"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_vp2_btn_primary"
+                        android:gravity="center"
+                        android:text="运行 Thread Demo"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/btn_thread_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/bg_vp2_btn_secondary"
+                        android:gravity="center"
+                        android:paddingHorizontal="16dp"
+                        android:text="清空"
+                        android:textColor="@color/vp2_btn_secondary_text"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_thread_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_search_field"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="4dp"
+                    android:padding="10dp"
+                    android:text="点击上方按钮查看执行结果"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- ===== Demo 2: HandlerThread ===== -->
+            <LinearLayout
+                android:id="@+id/section_handler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📌 2. HandlerThread"
+                    android:textColor="@color/demo_title"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="自带 Looper 的工作线程，通过 Handler 发送消息在子线程中串行执行。适合文件 IO、数据库操作等耗时任务队列。"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="3dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btn_handler_demo"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_vp2_btn_primary"
+                        android:gravity="center"
+                        android:text="运行 HandlerThread Demo"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/btn_handler_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/bg_vp2_btn_secondary"
+                        android:gravity="center"
+                        android:paddingHorizontal="16dp"
+                        android:text="清空"
+                        android:textColor="@color/vp2_btn_secondary_text"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_handler_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_search_field"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="4dp"
+                    android:padding="10dp"
+                    android:text="点击上方按钮查看执行结果"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- ===== Demo 3: Coroutine launch ===== -->
+            <LinearLayout
+                android:id="@+id/section_launch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📌 3. 协程基础 — launch"
+                    android:textColor="@color/demo_title"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="launch 启动一个不返回结果的协程。默认在 Dispatchers.Default 执行，可通过 Dispatchers.Main 切换到主线程更新 UI。"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="3dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btn_launch_demo"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_vp2_btn_primary"
+                        android:gravity="center"
+                        android:text="运行 launch Demo"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/btn_launch_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/bg_vp2_btn_secondary"
+                        android:gravity="center"
+                        android:paddingHorizontal="16dp"
+                        android:text="清空"
+                        android:textColor="@color/vp2_btn_secondary_text"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_launch_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_search_field"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="4dp"
+                    android:padding="10dp"
+                    android:text="点击上方按钮查看执行结果"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- ===== Demo 4: async / await ===== -->
+            <LinearLayout
+                android:id="@+id/section_async"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📌 4. 协程进阶 — async / await"
+                    android:textColor="@color/demo_title"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="async 启动一个返回结果的协程，通过 await() 获取结果。多个 async 可以并发执行，await 会挂起直到结果就绪。"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="3dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btn_async_demo"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_vp2_btn_primary"
+                        android:gravity="center"
+                        android:text="运行 async Demo"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/btn_async_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/bg_vp2_btn_secondary"
+                        android:gravity="center"
+                        android:paddingHorizontal="16dp"
+                        android:text="清空"
+                        android:textColor="@color/vp2_btn_secondary_text"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_async_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_search_field"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="4dp"
+                    android:padding="10dp"
+                    android:text="点击上方按钮查看执行结果"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- ===== Demo 5: Dispatchers 对比 ===== -->
+            <LinearLayout
+                android:id="@+id/section_dispatchers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📌 5. Dispatchers 调度器对比"
+                    android:textColor="@color/demo_title"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Dispatchers.Main（主线程/UI） / Default（CPU 密集型） / IO（网络/文件） / Unconfined（跟随当前线程）。对比不同调度的执行线程。"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="3dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btn_dispatchers_demo"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_vp2_btn_primary"
+                        android:gravity="center"
+                        android:text="运行 Dispatchers Demo"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/btn_dispatchers_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/bg_vp2_btn_secondary"
+                        android:gravity="center"
+                        android:paddingHorizontal="16dp"
+                        android:text="清空"
+                        android:textColor="@color/vp2_btn_secondary_text"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_dispatchers_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_search_field"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="4dp"
+                    android:padding="10dp"
+                    android:text="点击上方按钮查看执行结果"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- ===== Demo 6: withContext 切换线程 ===== -->
+            <LinearLayout
+                android:id="@+id/section_withctx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📌 6. withContext 线程切换"
+                    android:textColor="@color/demo_title"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="启动协程后使用 withContext 在 IO 线程执行耗时操作，完成后自动回到原上下文。这是 Android 中最常用的协程模式。"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="3dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btn_withctx_demo"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_vp2_btn_primary"
+                        android:gravity="center"
+                        android:text="运行 withContext Demo"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/btn_withctx_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/bg_vp2_btn_secondary"
+                        android:gravity="center"
+                        android:paddingHorizontal="16dp"
+                        android:text="清空"
+                        android:textColor="@color/vp2_btn_secondary_text"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_withctx_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_search_field"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="4dp"
+                    android:padding="10dp"
+                    android:text="点击上方按钮查看执行结果"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- ===== Demo 7: 协程取消 ===== -->
+            <LinearLayout
+                android:id="@+id/section_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📌 7. 协程取消与超时"
+                    android:textColor="@color/demo_title"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="协程支持协作式取消：调用 cancel() 或在协程中检查 isActive，以及使用 withTimeout / withTimeoutOrNull 实现超时控制。"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="3dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btn_cancel_1"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_vp2_btn_primary"
+                        android:gravity="center"
+                        android:text="取消 Demo"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/btn_cancel_2"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_rv_swipe"
+                        android:gravity="center"
+                        android:text="触发取消"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_cancel_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_search_field"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="4dp"
+                    android:padding="10dp"
+                    android:text="点击「取消 Demo」启动慢任务，再点「触发取消」中断它"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- ===== Demo 8: Flow ===== -->
+            <LinearLayout
+                android:id="@+id/section_flow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📌 8. Flow 异步数据流"
+                    android:textColor="@color/demo_title"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Flow 是协程中的冷数据流，emit 发射数据，collect 收集。支持 map / filter / catch 等操作符，适合观察数据变化。"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="3dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btn_flow_demo"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_vp2_btn_primary"
+                        android:gravity="center"
+                        android:text="运行 Flow Demo"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/btn_flow_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/bg_vp2_btn_secondary"
+                        android:gravity="center"
+                        android:paddingHorizontal="16dp"
+                        android:text="清空"
+                        android:textColor="@color/vp2_btn_secondary_text"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_flow_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_search_field"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="4dp"
+                    android:padding="10dp"
+                    android:text="点击上方按钮查看执行结果"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- ===== Demo 9: 实际场景 - 并发请求 ===== -->
+            <LinearLayout
+                android:id="@+id/section_parallel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📌 9. 实战：并发请求合并结果"
+                    android:textColor="@color/demo_title"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="模拟同时请求用户信息和商品列表，等两个结果都返回后合并展示。这是 async/await 最典型的应用场景。"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="3dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btn_parallel_demo"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_vp2_btn_primary"
+                        android:gravity="center"
+                        android:text="运行并发 Demo"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/btn_parallel_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/bg_vp2_btn_secondary"
+                        android:gravity="center"
+                        android:paddingHorizontal="16dp"
+                        android:text="清空"
+                        android:textColor="@color/vp2_btn_secondary_text"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_parallel_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_search_field"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="4dp"
+                    android:padding="10dp"
+                    android:text="点击上方按钮查看执行结果"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- ===== Demo 10: 进度条模拟 ===== -->
+            <LinearLayout
+                android:id="@+id/section_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📌 10. 实战：协程驱动进度条"
+                    android:textColor="@color/demo_title"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="用一个协程模拟下载进度更新。后台计算进度 → withContext(Main) 更新 UI，演示协程如何优雅处理渐进式任务。"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="3dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btn_progress_demo"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_vp2_btn_primary"
+                        android:gravity="center"
+                        android:text="启动下载模拟"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <!-- 进度条 -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_search_field">
+
+                    <View
+                        android:id="@+id/progress_bar"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_vp2_btn_primary" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_progress_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="进度：0%"
+                    android:textColor="@color/demo_accent"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- 底部说明 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="💡 最佳实践总结"
+                    android:textColor="@color/demo_title"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="① 简单后台任务 → launch + Dispatchers.IO\n② 需要结果 → async/await\n③ 需要切换线程 → withContext\n④ 需要取消/超时 → Job.cancel() / withTimeout\n⑤ 需要数据流 → Flow / StateFlow\n⑥ 避免 Thread + Handler，优先用协程\n⑦ 记得在 ViewModel 或 LifecycleScope 中启动，防止泄漏"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

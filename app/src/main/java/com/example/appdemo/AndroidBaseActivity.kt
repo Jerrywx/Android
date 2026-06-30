@@ -47,6 +47,11 @@ class AndroidBaseActivity : AppCompatActivity() {
                 getString(R.string.android_base_layout_hint),
                 AndroidLayoutActivity::class.java,
             ),
+            Entry(
+                getString(R.string.android_base_coroutine),
+                getString(R.string.android_base_coroutine_hint),
+                CoroutineDemoActivity::class.java,
+            ),
         )
 
         val list = findViewById<RecyclerView>(R.id.android_base_list)

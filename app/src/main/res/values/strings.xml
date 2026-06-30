@@ -21,6 +21,9 @@
     <string name="android_base_layout">布局 Layout</string>
     <string name="android_base_layout_hint">四大布局实战演示</string>
     <string name="android_layout_title">布局 Layout</string>
+    <string name="android_base_coroutine">Kotlin 多线程</string>
+    <string name="android_base_coroutine_hint">协程 / Flow / 并发实战</string>
+    <string name="coroutine_title">Kotlin 多线程与协程</string>
     <string name="android_view_pager2_title">ViewPager2</string>
 
     <string name="vp2_demo_onboarding">引导页 / Onboarding</string>

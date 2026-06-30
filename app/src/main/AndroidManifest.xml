@@ -98,6 +98,9 @@
         <activity
             android:name=".AndroidLayoutActivity"
             android:exported="false" />
+        <activity
+            android:name=".CoroutineDemoActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
