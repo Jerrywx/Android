@@ -52,6 +52,11 @@ class AndroidBaseActivity : AppCompatActivity() {
                 getString(R.string.android_base_coroutine_hint),
                 CoroutineDemoActivity::class.java,
             ),
+            Entry(
+                getString(R.string.android_base_network),
+                getString(R.string.android_base_network_hint),
+                AndroidNetworkActivity::class.java,
+            ),
         )
         /// 获取列表
         val list = findViewById<RecyclerView>(R.id.android_base_list)

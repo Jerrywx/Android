@@ -24,6 +24,15 @@
     <string name="android_base_coroutine">Kotlin 多线程</string>
     <string name="android_base_coroutine_hint">协程 / Flow / 并发实战</string>
     <string name="coroutine_title">Kotlin 多线程与协程</string>
+    <string name="android_base_network">网络请求</string>
+    <string name="android_base_network_hint">Retrofit + OkHttp + 协程实战</string>
+    <string name="network_title">Android 网络请求</string>
+    <string name="network_get_demo">GET 请求 · 获取用户列表</string>
+    <string name="network_get_single">GET 请求 · 获取单个用户</string>
+    <string name="network_post_demo">POST 请求 · 创建用户</string>
+    <string name="network_error_demo">异常处理 · 404 请求</string>
+    <string name="network_run">运行</string>
+    <string name="network_clear">清空</string>
     <string name="android_view_pager2_title">ViewPager2</string>
 
     <string name="vp2_demo_onboarding">引导页 / Onboarding</string>

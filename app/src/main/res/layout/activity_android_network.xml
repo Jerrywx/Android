@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/network_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/demo_index_bg"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/demo_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/header_bg"
+        app:contentInsetStart="0dp"
+        app:contentInsetEnd="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="4dp">
+
+            <ImageButton
+                android:id="@+id/demo_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/chat_back"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/demo_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingHorizontal="8dp"
+                android:textColor="@color/header_title"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ===== 概述 ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🌐 Retrofit + OkHttp + 协程"
+                    android:textColor="@color/demo_title"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="使用 Retrofit 接口化定义 API · OkHttp 处理底层网络通信 · Gson 自动 JSON 解析 · 协程 suspend 函数简化异步代码。\n\n所有请求基于公开测试 API：https://jsonplaceholder.typicode.com"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- ===== Demo 1: GET 列表 ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📌 1. GET 请求 — 获取用户列表"
+                    android:textColor="@color/demo_title"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="3dp"
+                    android:text="GET /users · 通过 @GET 注解定义接口，使用 suspend 函数返回结果，在协程中直接调用即可。"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btn_get_list"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_vp2_btn_primary"
+                        android:gravity="center"
+                        android:text="@string/network_get_demo"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/btn_get_list_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/bg_vp2_btn_secondary"
+                        android:gravity="center"
+                        android:paddingHorizontal="16dp"
+                        android:text="@string/network_clear"
+                        android:textColor="@color/vp2_btn_secondary_text"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_get_list_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_search_field"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="4dp"
+                    android:padding="10dp"
+                    android:text="点击上方按钮发起请求"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- ===== Demo 2: GET 单个 ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📌 2. GET 请求 — 路径参数"
+                    android:textColor="@color/demo_title"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="3dp"
+                    android:text="GET /users/{id} · 通过 @Path 注解将参数拼接到 URL 路径中，演示路径参数的用法。"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="用户 ID:"
+                        android:textColor="@color/demo_subtitle"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/et_user_id"
+                        android:layout_width="80dp"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/bg_search_field"
+                        android:inputType="number"
+                        android:paddingHorizontal="10dp"
+                        android:text="1"
+                        android:textColor="@color/demo_title"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/btn_get_single"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_vp2_btn_primary"
+                        android:gravity="center"
+                        android:text="@string/network_run"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_get_single_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_search_field"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="4dp"
+                    android:padding="10dp"
+                    android:text="输入 ID 后点击运行（有效 ID：1~10）"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- ===== Demo 3: POST ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📌 3. POST 请求 — 创建文章"
+                    android:textColor="@color/demo_title"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="3dp"
+                    android:text="POST /posts · 使用 @Body 注解发送 JSON 请求体，Retrofit 通过 Gson 自动序列化。"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/et_post_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_search_field"
+                    android:hint="标题"
+                    android:paddingHorizontal="10dp"
+                    android:text="Retrofit 学习笔记"
+                    android:textColor="@color/demo_title"
+                    android:textColorHint="@color/demo_hint"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/et_post_body"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_search_field"
+                    android:gravity="top|start"
+                    android:hint="内容"
+                    android:padding="10dp"
+                    android:text="今天学习了 Retrofit + 协程 的组合使用。"
+                    android:textColor="@color/demo_title"
+                    android:textColorHint="@color/demo_hint"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btn_post_demo"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_vp2_btn_primary"
+                        android:gravity="center"
+                        android:text="@string/network_post_demo"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/btn_post_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/bg_vp2_btn_secondary"
+                        android:gravity="center"
+                        android:paddingHorizontal="16dp"
+                        android:text="@string/network_clear"
+                        android:textColor="@color/vp2_btn_secondary_text"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_post_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_search_field"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="4dp"
+                    android:padding="10dp"
+                    android:text="点击发送 POST 请求"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- ===== Demo 4: Error ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📌 4. 异常处理 — 404 / 网络错误"
+                    android:textColor="@color/demo_title"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="3dp"
+                    android:text="GET /users/9999 · 请求不存在的资源，演示 HttpException 和 IOException 的捕获方式。"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btn_error_demo"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_rv_swipe"
+                        android:gravity="center"
+                        android:text="@string/network_error_demo"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/btn_error_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/bg_vp2_btn_secondary"
+                        android:gravity="center"
+                        android:paddingHorizontal="16dp"
+                        android:text="@string/network_clear"
+                        android:textColor="@color/vp2_btn_secondary_text"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_error_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_search_field"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="4dp"
+                    android:padding="10dp"
+                    android:text="点击触发一次失败请求"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- ===== 总结 ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="💡 关键步骤"
+                    android:textColor="@color/demo_title"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="① 添加依赖 retrofit + converter-gson + okhttp-logging-interceptor\n② AndroidManifest 中声明 INTERNET 权限\n③ 定义数据类（Gson 自动映射 JSON 字段）\n④ 定义 ApiService 接口（@GET / @POST / @Path / @Query / @Body）\n⑤ 构造 Retrofit 实例（baseUrl + OkHttpClient + 转换器）\n⑥ 在协程中调用 suspend 函数并处理异常"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
