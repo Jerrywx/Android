@@ -318,4 +318,50 @@
     <string name="frag_container_tab_profile">我的</string>
     <string name="frag_container_page">%1$s Fragment · 状态计数 %2$d</string>
     <string name="frag_container_hit">点我 +1</string>
+
+    <!-- ============ 存储 Storage ============ -->
+    <string name="android_base_storage">数据存储</string>
+    <string name="android_base_storage_hint">SharedPreferences · DataStore · SQLite · 文件</string>
+    <string name="storage_title">数据存储</string>
+
+    <string name="storage_sp">SharedPreferences</string>
+    <string name="storage_sp_hint">轻量键值对 · apply/commit</string>
+    <string name="storage_datastore">DataStore (Preferences)</string>
+    <string name="storage_datastore_hint">协程 + Flow 版键值对</string>
+    <string name="storage_sqlite">SQLite (原生)</string>
+    <string name="storage_sqlite_hint">SQLiteOpenHelper 增删改查</string>
+    <string name="storage_file">文件读写</string>
+    <string name="storage_file_hint">filesDir / cacheDir / extFiles</string>
+
+    <string name="storage_log_title">📜 操作日志</string>
+    <string name="storage_log_hint">点击按钮触发操作</string>
+    <string name="storage_action_read">读取</string>
+    <string name="storage_action_clear">清空</string>
+    <string name="storage_action_save">保存</string>
+
+    <string name="storage_sp_title">SharedPreferences</string>
+    <string name="storage_sp_desc">存储轻量键值对，底层是 XML 文件。apply() 异步写盘不阻塞主线程；commit() 同步写盘返回是否成功。可注册监听器观察变化。</string>
+    <string name="storage_sp_nick_hint">昵称</string>
+    <string name="storage_sp_level_value">等级：%1$d</string>
+    <string name="storage_sp_push">开启推送</string>
+
+    <string name="storage_datastore_title">DataStore</string>
+    <string name="storage_datastore_desc">DataStore 是 SharedPreferences 的替代方案。基于协程 + Flow，读写非阻塞，Key 强类型，事务安全。首次使用需在 build.gradle 添加 datastore-preferences 依赖。</string>
+    <string name="storage_ds_level_hint">等级（整数）</string>
+    <string name="storage_ds_toggle_dark">切换 darkMode</string>
+    <string name="storage_ds_flow_title">🌊 Flow 实时观察</string>
+    <string name="storage_ds_flow_value">nick=%1$s, level=%2$d</string>
+
+    <string name="storage_sqlite_title">SQLite 原生</string>
+    <string name="storage_sqlite_title_hint">笔记标题</string>
+    <string name="storage_sqlite_content_hint">笔记内容</string>
+    <string name="storage_sqlite_insert">新增</string>
+    <string name="storage_sqlite_clear">清空整表</string>
+    <string name="storage_note_edit">改</string>
+    <string name="storage_note_delete">删</string>
+
+    <string name="storage_file_title">文件读写</string>
+    <string name="storage_file_desc">Android 三种常用私有目录：\n· filesDir 内部存储，卸载即清除\n· cacheDir 缓存，系统空间不足可能被清理\n· getExternalFilesDir 外部存储，无需权限，卸载清除</string>
+    <string name="storage_file_content_hint">输入要写入的内容</string>
+    <string name="storage_file_delete_all">删除全部</string>
 </resources>

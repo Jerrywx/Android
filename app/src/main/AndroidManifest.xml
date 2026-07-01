@@ -185,6 +185,21 @@
         <activity
             android:name=".demo.fragment.FragmentContainerDemoActivity"
             android:exported="false" />
+        <activity
+            android:name=".demo.storage.AndroidStorageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.storage.SpDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.storage.DataStoreDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.storage.SqliteDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.storage.FileIoDemoActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
