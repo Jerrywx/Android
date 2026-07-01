@@ -213,4 +213,109 @@
     <string name="anim_run">播放</string>
     <string name="anim_reset">重置</string>
     <string name="anim_clear">清空</string>
+
+    <!-- ========== Fragment ========== -->
+    <string name="android_base_fragment">Fragment</string>
+    <string name="android_base_fragment_hint">生命周期 · 事务 · 通信 · Dialog / BottomSheet</string>
+    <string name="fragment_title">Fragment 全景演示</string>
+
+    <string name="frag_lifecycle">生命周期 Lifecycle</string>
+    <string name="frag_lifecycle_hint">11 个回调方法完整日志追踪</string>
+    <string name="frag_transaction">事务操作 Transaction</string>
+    <string name="frag_transaction_hint">add / replace / hide / show / attach / detach / 回退栈</string>
+    <string name="frag_arguments">参数传递 Arguments</string>
+    <string name="frag_arguments_hint">newInstance 模式 · Bundle 安全传参</string>
+    <string name="frag_result">Result API</string>
+    <string name="frag_result_hint">setFragmentResult · setFragmentResultListener</string>
+    <string name="frag_shared_vm">共享 ViewModel</string>
+    <string name="frag_shared_vm_hint">activityViewModels 多 Fragment 通信</string>
+    <string name="frag_nested">嵌套 Fragment</string>
+    <string name="frag_nested_hint">childFragmentManager · 父子层级</string>
+    <string name="frag_dialog">DialogFragment</string>
+    <string name="frag_dialog_hint">自定义弹窗 · 生命周期驱动</string>
+    <string name="frag_bottom_sheet">BottomSheetDialogFragment</string>
+    <string name="frag_bottom_sheet_hint">Material 底部抽屉 · 半屏交互</string>
+    <string name="frag_state_save">状态保存</string>
+    <string name="frag_state_save_hint">onSaveInstanceState · ViewModel 对比</string>
+    <string name="frag_container">FragmentContainerView</string>
+    <string name="frag_container_hint">底部导航手动切换 · Tab 切换保留状态</string>
+
+    <string name="frag_common_add">添加</string>
+    <string name="frag_common_remove">移除</string>
+    <string name="frag_common_replace">替换</string>
+    <string name="frag_common_hide">隐藏</string>
+    <string name="frag_common_show">显示</string>
+    <string name="frag_common_attach">Attach</string>
+    <string name="frag_common_detach">Detach</string>
+    <string name="frag_common_back">回退栈 Pop</string>
+    <string name="frag_common_clear">清空日志</string>
+    <string name="frag_common_send">发送</string>
+    <string name="frag_common_confirm">确定</string>
+    <string name="frag_common_cancel">取消</string>
+    <string name="frag_common_open">打开</string>
+
+    <string name="frag_life_desc">Fragment 生命周期完整回调（含 View 层与容器层）：\nonAttach → onCreate → onCreateView → onViewCreated → onViewStateRestored → onStart → onResume → onPause → onStop → onDestroyView → onDestroy → onDetach</string>
+    <string name="frag_life_action_add">添加 Fragment</string>
+    <string name="frag_life_action_remove">移除 Fragment</string>
+    <string name="frag_life_action_replace">替换 Fragment</string>
+    <string name="frag_life_placeholder">点击上方按钮观察生命周期回调</string>
+
+    <string name="frag_tx_desc">FragmentTransaction 支持的核心操作：\nadd 保留原视图 · replace 替换容器 · hide/show 只切换可见性 · attach/detach 销毁/重建视图但保留实例 · addToBackStack 加入回退栈</string>
+
+    <string name="frag_args_desc">Fragment 参数传递的推荐做法：通过 newInstance() 工厂方法 + Bundle 传参，避免自定义构造函数，保证配置变更后能重建。</string>
+    <string name="frag_args_input_name">昵称</string>
+    <string name="frag_args_input_age">年龄</string>
+    <string name="frag_args_create">创建带参数的 Fragment</string>
+    <string name="frag_args_reset">移除</string>
+    <string name="frag_args_display">昵称：%1$s · 年龄：%2$d</string>
+
+    <string name="frag_result_desc">Fragment Result API 是官方推荐的父子 Fragment 通信方式，无需接口回调，也无需 EventBus。</string>
+    <string name="frag_result_input">在下方 Fragment 输入内容 →</string>
+    <string name="frag_result_received">收到子 Fragment 的结果：%1$s</string>
+    <string name="frag_result_none">尚未收到结果</string>
+
+    <string name="frag_shared_desc">activityViewModels() 让宿主 Activity 下的多个 Fragment 共享同一个 ViewModel 实例，是 Fragment 间通信的标准方案。</string>
+    <string name="frag_shared_left">发送端 Fragment</string>
+    <string name="frag_shared_right">接收端 Fragment</string>
+    <string name="frag_shared_input_hint">输入消息</string>
+    <string name="frag_shared_current">当前共享状态：%1$s</string>
+    <string name="frag_shared_empty">（无）</string>
+
+    <string name="frag_nested_desc">通过 childFragmentManager 在一个父 Fragment 内嵌入多个子 Fragment，形成层级化 UI 结构。</string>
+    <string name="frag_nested_tab_a">子页 A</string>
+    <string name="frag_nested_tab_b">子页 B</string>
+    <string name="frag_nested_tab_c">子页 C</string>
+    <string name="frag_nested_child">这是子 Fragment：%1$s\n宿主是父 Fragment，管理它的是 childFragmentManager。</string>
+
+    <string name="frag_dialog_desc">DialogFragment 是官方推荐的对话框实现方式，具备完整生命周期，配置变更后自动重建。</string>
+    <string name="frag_dialog_open">弹出 DialogFragment</string>
+    <string name="frag_dialog_open_alert">系统 AlertDialog 版</string>
+    <string name="frag_dialog_open_full">全屏 DialogFragment</string>
+    <string name="frag_dialog_title">提示</string>
+    <string name="frag_dialog_message">这是一个自定义样式的 DialogFragment。生命周期与普通 Fragment 一致，可以通过 Result API 回传数据。</string>
+    <string name="frag_dialog_result">对话框结果：%1$s</string>
+    <string name="frag_dialog_full_title">全屏对话框</string>
+    <string name="frag_dialog_full_body">通过 setStyle(STYLE_NORMAL, R.style.FullScreenDialog) 可以让 DialogFragment 铺满屏幕，适合表单类交互。</string>
+
+    <string name="frag_sheet_desc">BottomSheetDialogFragment 是 Material 组件库提供的底部抽屉，支持拖拽收起、半展开状态。</string>
+    <string name="frag_sheet_open">弹出 BottomSheet</string>
+    <string name="frag_sheet_title">操作面板</string>
+    <string name="frag_sheet_action_share">分享</string>
+    <string name="frag_sheet_action_save">收藏</string>
+    <string name="frag_sheet_action_report">举报</string>
+    <string name="frag_sheet_action_delete">删除</string>
+    <string name="frag_sheet_selected">已选择：%1$s</string>
+
+    <string name="frag_save_desc">对比两种状态保存方式：onSaveInstanceState 适合轻量数据；ViewModel 适合大对象且横竖屏切换零成本。</string>
+    <string name="frag_save_input_hint">输入一段文本，横屏或按 Home 后再打开</string>
+    <string name="frag_save_bundle">Bundle 保存</string>
+    <string name="frag_save_vm">ViewModel 保存</string>
+    <string name="frag_save_count">按钮点击次数：%1$d</string>
+
+    <string name="frag_container_desc">FragmentContainerView + 手动 commit 组合，可实现底部 Tab 切换并保留每个页面的状态（hide/show 不销毁视图）。</string>
+    <string name="frag_container_tab_home">首页</string>
+    <string name="frag_container_tab_message">消息</string>
+    <string name="frag_container_tab_profile">我的</string>
+    <string name="frag_container_page">%1$s Fragment · 状态计数 %2$d</string>
+    <string name="frag_container_hit">点我 +1</string>
 </resources>

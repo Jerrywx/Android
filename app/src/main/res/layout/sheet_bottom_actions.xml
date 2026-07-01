@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="16dp">
+
+    <View
+        android:layout_width="36dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/demo_divider" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="@string/frag_sheet_title"
+        android:textColor="@color/demo_title"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/sheet_action_share"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="12dp"
+        android:text="@string/frag_sheet_action_share"
+        android:textColor="@color/demo_title"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/sheet_action_save"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="12dp"
+        android:text="@string/frag_sheet_action_save"
+        android:textColor="@color/demo_title"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/sheet_action_report"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="12dp"
+        android:text="@string/frag_sheet_action_report"
+        android:textColor="@color/demo_title"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/sheet_action_delete"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="12dp"
+        android:text="@string/frag_sheet_action_delete"
+        android:textColor="#FFFF4D4F"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/sheet_action_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_vp2_btn_secondary"
+        android:gravity="center"
+        android:text="@string/frag_common_cancel"
+        android:textColor="@color/vp2_btn_secondary_text"
+        android:textSize="14sp" />
+</LinearLayout>

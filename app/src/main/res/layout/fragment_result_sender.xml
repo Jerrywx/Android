@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="14dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/frag_result_input"
+        android:textColor="@color/demo_subtitle"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/et_result_input"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_vp2_input"
+        android:hint="输入要发送的内容"
+        android:inputType="text"
+        android:paddingHorizontal="12dp"
+        android:textColor="@color/demo_title"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/btn_result_send"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_vp2_btn_primary"
+        android:gravity="center"
+        android:text="@string/frag_common_send"
+        android:textColor="@color/vp2_btn_primary_text"
+        android:textSize="13sp" />
+</LinearLayout>

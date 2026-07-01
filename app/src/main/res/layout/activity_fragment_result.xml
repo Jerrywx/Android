@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_result_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/demo_index_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_demo_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_demo_index_card"
+                android:padding="14dp"
+                android:text="@string/frag_result_desc"
+                android:textColor="@color/demo_subtitle"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="宿主 Activity 端 · 接收器"
+                android:textColor="@color/demo_title"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_result_received"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_demo_index_card"
+                android:minHeight="60dp"
+                android:padding="14dp"
+                android:textColor="@color/demo_title"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="子 Fragment 端 · 发送器"
+                android:textColor="@color/demo_title"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/fragment_result_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_demo_index_card" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

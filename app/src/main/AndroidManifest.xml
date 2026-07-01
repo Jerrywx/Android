@@ -152,6 +152,39 @@
         <activity
             android:name=".CanvasAnimationDemoActivity"
             android:exported="false" />
+        <activity
+            android:name=".AndroidFragmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FragmentLifecycleDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FragmentTransactionDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FragmentArgsDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FragmentResultDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FragmentSharedVmDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FragmentNestedDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FragmentDialogDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FragmentBottomSheetDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FragmentSaveStateDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FragmentContainerDemoActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

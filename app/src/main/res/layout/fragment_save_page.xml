@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_demo_index_card"
+    android:orientation="vertical"
+    android:padding="14dp">
+
+    <TextView
+        android:id="@+id/tv_save_kind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/demo_accent"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_save_input"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_vp2_input"
+        android:hint="@string/frag_save_input_hint"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingHorizontal="12dp"
+        android:textColor="@color/demo_title"
+        android:textColorHint="@color/demo_hint"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_save_hit"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:background="@drawable/bg_vp2_btn_primary"
+            android:gravity="center"
+            android:paddingHorizontal="16dp"
+            android:text="@string/frag_container_hit"
+            android:textColor="@color/vp2_btn_primary_text"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_save_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:textColor="@color/demo_subtitle"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

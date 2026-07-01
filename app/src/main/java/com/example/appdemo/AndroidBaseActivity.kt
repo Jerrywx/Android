@@ -62,6 +62,11 @@ class AndroidBaseActivity : AppCompatActivity() {
                 getString(R.string.android_base_animation_hint),
                 AndroidAnimationActivity::class.java,
             ),
+            NavItem(
+                getString(R.string.android_base_fragment),
+                getString(R.string.android_base_fragment_hint),
+                AndroidFragmentActivity::class.java,
+            ),
         )
         /// 获取列表
         val list = findViewById<RecyclerView>(R.id.android_base_list)
