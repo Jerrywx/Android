@@ -1,5 +1,10 @@
 package com.example.appdemo
 
+import com.example.appdemo.tabs.WeChatFragment
+import com.example.appdemo.tabs.ContactsFragment
+import com.example.appdemo.tabs.DiscoverFragment
+import com.example.appdemo.tabs.MeFragment
+
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView

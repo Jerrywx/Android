@@ -63,7 +63,7 @@
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
-                <com.example.appdemo.anim.CircleProgressView
+                <com.example.appdemo.demo.animation.widget.CircleProgressView
                     android:id="@+id/circle_progress"
                     android:layout_width="180dp"
                     android:layout_height="180dp"
@@ -95,7 +95,7 @@
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
-                <com.example.appdemo.anim.RippleView
+                <com.example.appdemo.demo.animation.widget.RippleView
                     android:id="@+id/ripple_view"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"

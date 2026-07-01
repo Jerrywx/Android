@@ -41,7 +41,7 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/save_bundle_container"
-                android:name="com.example.appdemo.FragmentSaveStateDemoActivity$BundleFragment"
+                android:name="com.example.appdemo.demo.fragment.FragmentSaveStateDemoActivity$BundleFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp" />
@@ -57,7 +57,7 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/save_vm_container"
-                android:name="com.example.appdemo.FragmentSaveStateDemoActivity$VmFragment"
+                android:name="com.example.appdemo.demo.fragment.FragmentSaveStateDemoActivity$VmFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp" />

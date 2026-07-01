@@ -20,7 +20,7 @@
             android:paddingEnd="32dp"
             android:scrollbars="none" />
 
-        <com.example.appdemo.AlphabetIndexBar
+        <com.example.appdemo.demo.recyclerview.AlphabetIndexBar
             android:id="@+id/fast_index_bar"
             android:layout_width="28dp"
             android:layout_height="match_parent"

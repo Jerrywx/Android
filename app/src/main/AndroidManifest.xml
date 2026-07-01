@@ -25,165 +25,165 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ChatActivity"
+            android:name=".demo.recyclerview.chat.ChatActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".AndroidBaseActivity"
+            android:name=".common.AndroidBaseActivity"
             android:exported="false" />
         <activity
-            android:name=".AndroidRecyclerViewActivity"
+            android:name=".demo.recyclerview.AndroidRecyclerViewActivity"
             android:exported="false" />
         <activity
-            android:name=".RecyclerViewDemoActivity"
+            android:name=".demo.recyclerview.RecyclerViewDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".RecyclerViewDemoActivityPro"
+            android:name=".demo.recyclerview.RecyclerViewDemoActivityPro"
             android:exported="false" />
         <activity
-            android:name=".GalleryDemoActivity"
+            android:name=".demo.recyclerview.GalleryDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".ChatDemoActivity"
+            android:name=".demo.recyclerview.chat.ChatDemoActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".StickyHeaderDemoActivity"
+            android:name=".demo.recyclerview.StickyHeaderDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".NestedHomeDemoActivity"
+            android:name=".demo.recyclerview.NestedHomeDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".ConcatAdapterDemoActivity"
+            android:name=".demo.recyclerview.ConcatAdapterDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".TimelineDemoActivity"
+            android:name=".demo.recyclerview.TimelineDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".FastScrollerDemoActivity"
+            android:name=".demo.recyclerview.FastScrollerDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".VideoFeedDemoActivity"
+            android:name=".demo.recyclerview.VideoFeedDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".TagFlowDemoActivity"
+            android:name=".demo.recyclerview.TagFlowDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".SearchFilterDemoActivity"
+            android:name=".demo.recyclerview.SearchFilterDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".LoopBannerDemoActivity"
+            android:name=".demo.recyclerview.LoopBannerDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".AndroidViewPager2Activity"
+            android:name=".demo.viewpager.AndroidViewPager2Activity"
             android:exported="false" />
         <activity
-            android:name=".Vp2OnboardingDemoActivity"
+            android:name=".demo.viewpager.Vp2OnboardingDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".Vp2TabDemoActivity"
+            android:name=".demo.viewpager.Vp2TabDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".Vp2GalleryDemoActivity"
+            android:name=".demo.viewpager.Vp2GalleryDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".Vp2VerticalFeedDemoActivity"
+            android:name=".demo.viewpager.Vp2VerticalFeedDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".Vp2CardStackDemoActivity"
+            android:name=".demo.viewpager.Vp2CardStackDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".Vp2WizardDemoActivity"
+            android:name=".demo.viewpager.Vp2WizardDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".Vp2BannerDemoActivity"
+            android:name=".demo.viewpager.Vp2BannerDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".AndroidLayoutActivity"
+            android:name=".demo.layout.AndroidLayoutActivity"
             android:exported="false" />
         <activity
-            android:name=".CoroutineDemoActivity"
+            android:name=".demo.concurrent.CoroutineDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".AndroidNetworkActivity"
+            android:name=".demo.network.AndroidNetworkActivity"
             android:exported="false" />
         <activity
-            android:name=".AndroidAnimationActivity"
+            android:name=".demo.animation.AndroidAnimationActivity"
             android:exported="false" />
         <activity
-            android:name=".TweenAnimationDemoActivity"
+            android:name=".demo.animation.TweenAnimationDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".PropertyAnimationDemoActivity"
+            android:name=".demo.animation.PropertyAnimationDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".FrameAnimationDemoActivity"
+            android:name=".demo.animation.FrameAnimationDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".InterpolatorDemoActivity"
+            android:name=".demo.animation.InterpolatorDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".LayoutAnimationDemoActivity"
+            android:name=".demo.animation.LayoutAnimationDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".ViewPropertyAnimatorDemoActivity"
+            android:name=".demo.animation.ViewPropertyAnimatorDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".TransitionDemoActivity"
+            android:name=".demo.animation.TransitionDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".SharedElementDemoActivity"
+            android:name=".demo.animation.SharedElementDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".SharedElementDetailActivity"
+            android:name=".demo.animation.SharedElementDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".ActivityTransitionDemoActivity"
+            android:name=".demo.animation.ActivityTransitionDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".ActivityTransitionTargetActivity"
+            android:name=".demo.animation.ActivityTransitionTargetActivity"
             android:exported="false" />
         <activity
-            android:name=".PhysicsAnimationDemoActivity"
+            android:name=".demo.animation.PhysicsAnimationDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".VectorAnimationDemoActivity"
+            android:name=".demo.animation.VectorAnimationDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".CanvasAnimationDemoActivity"
+            android:name=".demo.animation.CanvasAnimationDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".AndroidFragmentActivity"
+            android:name=".demo.fragment.AndroidFragmentActivity"
             android:exported="false" />
         <activity
-            android:name=".FragmentLifecycleDemoActivity"
+            android:name=".demo.fragment.FragmentLifecycleDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".FragmentTransactionDemoActivity"
+            android:name=".demo.fragment.FragmentTransactionDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".FragmentArgsDemoActivity"
+            android:name=".demo.fragment.FragmentArgsDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".FragmentResultDemoActivity"
+            android:name=".demo.fragment.FragmentResultDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".FragmentSharedVmDemoActivity"
+            android:name=".demo.fragment.FragmentSharedVmDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".FragmentNestedDemoActivity"
+            android:name=".demo.fragment.FragmentNestedDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".FragmentDialogDemoActivity"
+            android:name=".demo.fragment.FragmentDialogDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".FragmentBottomSheetDemoActivity"
+            android:name=".demo.fragment.FragmentBottomSheetDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".FragmentSaveStateDemoActivity"
+            android:name=".demo.fragment.FragmentSaveStateDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".FragmentContainerDemoActivity"
+            android:name=".demo.fragment.FragmentContainerDemoActivity"
             android:exported="false" />
     </application>
 
