@@ -177,4 +177,40 @@
     <string name="loop_banner_status">第 %1$d / %2$d 张 · %3$s</string>
     <string name="loop_banner_pause">暂停自动轮播</string>
     <string name="loop_banner_resume">恢复自动轮播</string>
+
+    <!-- ========== Android 动画 ========== -->
+    <string name="android_base_animation">动画 Animation</string>
+    <string name="android_base_animation_hint">补间 · 属性 · 帧 · 过渡 · 物理动画</string>
+    <string name="anim_title">Android 动画大全</string>
+
+    <!-- 入口列表 -->
+    <string name="anim_tween">补间动画 (View Animation)</string>
+    <string name="anim_tween_hint">Alpha / Scale / Translate / Rotate / Set</string>
+    <string name="anim_property">属性动画 (Property Animation)</string>
+    <string name="anim_property_hint">ObjectAnimator / ValueAnimator / AnimatorSet</string>
+    <string name="anim_frame">帧动画 (Frame Animation)</string>
+    <string name="anim_frame_hint">AnimationDrawable 逐帧播放</string>
+    <string name="anim_interpolator">插值器与求值器</string>
+    <string name="anim_interpolator_hint">Interpolator · TypeEvaluator</string>
+    <string name="anim_layout">布局动画 (LayoutAnimation)</string>
+    <string name="anim_layout_hint">RecyclerView · ViewGroup 入场动画</string>
+    <string name="anim_view_property">ViewPropertyAnimator</string>
+    <string name="anim_view_property_hint">链式调用 · 简洁高效</string>
+    <string name="anim_transition">过渡动画 (Transition)</string>
+    <string name="anim_transition_hint">TransitionManager · 场景切换</string>
+    <string name="anim_shared_element">共享元素动画</string>
+    <string name="anim_shared_element_hint">Activity 间元素无缝过渡</string>
+    <string name="anim_activity_transition">Activity 转场动画</string>
+    <string name="anim_activity_transition_hint">overridePendingTransition · 系统动画</string>
+    <string name="anim_physics">物理动画 (Physics-based)</string>
+    <string name="anim_physics_hint">SpringAnimation · FlingAnimation</string>
+    <string name="anim_vector">矢量动画 (AnimatedVector)</string>
+    <string name="anim_vector_hint">AnimatedVectorDrawable 路径动画</string>
+    <string name="anim_canvas">自定义绘制动画</string>
+    <string name="anim_canvas_hint">Canvas + ValueAnimator 自定义 View</string>
+
+    <!-- 通用 -->
+    <string name="anim_run">播放</string>
+    <string name="anim_reset">重置</string>
+    <string name="anim_clear">清空</string>
 </resources>

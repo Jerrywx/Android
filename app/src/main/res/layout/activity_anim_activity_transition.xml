@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/at_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/demo_index_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_demo_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🚪 Activity 转场动画"
+                    android:textColor="@color/demo_title"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="overridePendingTransition 控制 Activity 进入与退出动画；ActivityOptions 提供官方推荐的缩放、淡入、悬浮等转场。"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/btn_slide"
+                    style="@style/AnimDemoBtnPrimary"
+                    android:layout_width="match_parent"
+                    android:text="左右滑入 (slide_in_right)" />
+
+                <TextView
+                    android:id="@+id/btn_fade"
+                    style="@style/AnimDemoBtnPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:text="淡入淡出 (fade)" />
+
+                <TextView
+                    android:id="@+id/btn_scale_up"
+                    style="@style/AnimDemoBtnPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:text="从按钮位置放大 (ScaleUp)" />
+
+                <TextView
+                    android:id="@+id/btn_clip_reveal"
+                    style="@style/AnimDemoBtnPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:text="圆形展开 (ClipReveal)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="💡 核心代码"
+                    android:textColor="@color/demo_title"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_search_field"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="3dp"
+                    android:padding="10dp"
+                    android:text="// 方式 1：overridePendingTransition\nstartActivity(intent)\noverridePendingTransition(\n  R.anim.slide_in_right,\n  R.anim.slide_out_left)\n\n// 方式 2：ActivityOptions\nval opts = ActivityOptions\n  .makeScaleUpAnimation(view, 0, 0, w, h)\nstartActivity(intent, opts.toBundle())"
+                    android:textColor="@color/demo_title"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

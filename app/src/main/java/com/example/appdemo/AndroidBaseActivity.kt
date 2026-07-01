@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class AndroidBaseActivity : AppCompatActivity() {
 
-    private data class Entry(val title: String, val subtitle: String, val target: Class<*>)
+    private data class NavItem(val title: String, val subtitle: String, val target: Class<*>)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,30 +32,35 @@ class AndroidBaseActivity : AppCompatActivity() {
         findViewById<ImageButton>(R.id.btn_android_base_back).setOnClickListener { finish() }
 
         val entries = listOf(
-            Entry(
+            NavItem(
                 getString(R.string.android_base_recycler_view),
                 getString(R.string.android_base_recycler_view_hint),
                 AndroidRecyclerViewActivity::class.java,
             ),
-            Entry(
+            NavItem(
                 getString(R.string.android_base_view_pager2),
                 getString(R.string.android_base_view_pager2_hint),
                 AndroidViewPager2Activity::class.java,
             ),
-            Entry(
+            NavItem(
                 getString(R.string.android_base_layout),
                 getString(R.string.android_base_layout_hint),
                 AndroidLayoutActivity::class.java,
             ),
-            Entry(
+            NavItem(
                 getString(R.string.android_base_coroutine),
                 getString(R.string.android_base_coroutine_hint),
                 CoroutineDemoActivity::class.java,
             ),
-            Entry(
+            NavItem(
                 getString(R.string.android_base_network),
                 getString(R.string.android_base_network_hint),
                 AndroidNetworkActivity::class.java,
+            ),
+            NavItem(
+                getString(R.string.android_base_animation),
+                getString(R.string.android_base_animation_hint),
+                AndroidAnimationActivity::class.java,
             ),
         )
         /// 获取列表
@@ -67,8 +72,8 @@ class AndroidBaseActivity : AppCompatActivity() {
     }
 
     private class EntryAdapter(
-        private val items: List<Entry>,
-        private val onClick: (Entry) -> Unit,
+        private val items: List<NavItem>,
+        private val onClick: (NavItem) -> Unit,
     ) : RecyclerView.Adapter<EntryAdapter.VH>() {
 
         /// 主要作用是创建并返回一个新的 ViewHolder 实例
@@ -85,11 +90,11 @@ class AndroidBaseActivity : AppCompatActivity() {
             private val index: TextView = view.findViewById(R.id.study_index)
             private val title: TextView = view.findViewById(R.id.study_title)
             private val subtitle: TextView = view.findViewById(R.id.study_subtitle)
-            fun bind(entry: Entry, no: Int, onClick: (Entry) -> Unit) {
+            fun bind(item: NavItem, no: Int, onClick: (NavItem) -> Unit) {
                 index.text = no.toString()
-                title.text = entry.title
-                subtitle.text = entry.subtitle
-                card.setOnClickListener { onClick(entry) }
+                title.text = item.title
+                subtitle.text = item.subtitle
+                card.setOnClickListener { onClick(item) }
             }
         }
     }

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/canvas_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/demo_index_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_demo_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🖌 自定义 Canvas 动画"
+                    android:textColor="@color/demo_title"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="通过自定义 View + ValueAnimator 驱动 invalidate()，在 onDraw 中重绘内容。适合实现进度环、波纹、粒子、加载等定制动画。"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- 进度环 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_demo_index_card"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="⭕ 圆环进度"
+                    android:textColor="@color/demo_title"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <com.example.appdemo.anim.CircleProgressView
+                    android:id="@+id/circle_progress"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:id="@+id/btn_progress_run"
+                    style="@style/AnimDemoBtnPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="12dp"
+                    android:text="加载到 100%" />
+            </LinearLayout>
+
+            <!-- 水波纹 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_demo_index_card"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🌊 水波纹扩散"
+                    android:textColor="@color/demo_title"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <com.example.appdemo.anim.RippleView
+                    android:id="@+id/ripple_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btn_ripple_start"
+                        style="@style/AnimDemoBtnPrimary"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="开始" />
+
+                    <TextView
+                        android:id="@+id/btn_ripple_stop"
+                        style="@style/AnimDemoBtnSecondary"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:text="停止" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

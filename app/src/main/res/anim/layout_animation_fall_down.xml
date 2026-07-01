@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LayoutAnimation：列表/网格首次显示时逐项执行 item_slide_in_bottom -->
+<layoutAnimation xmlns:android="http://schemas.android.com/apk/res/android"
+    android:animation="@anim/item_slide_in_bottom"
+    android:animationOrder="normal"
+    android:delay="15%" />

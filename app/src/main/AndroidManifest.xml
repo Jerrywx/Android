@@ -107,6 +107,51 @@
         <activity
             android:name=".AndroidNetworkActivity"
             android:exported="false" />
+        <activity
+            android:name=".AndroidAnimationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TweenAnimationDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PropertyAnimationDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FrameAnimationDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InterpolatorDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LayoutAnimationDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewPropertyAnimatorDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TransitionDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SharedElementDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SharedElementDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityTransitionDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityTransitionTargetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PhysicsAnimationDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VectorAnimationDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CanvasAnimationDemoActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
