@@ -105,6 +105,11 @@ class AndroidBaseActivity : AppCompatActivity() {
                 getString(R.string.android_base_customview_hint),
                 com.example.appdemo.demo.customview.AndroidCustomViewActivity::class.java,
             ),
+            NavItem(
+                getString(R.string.android_base_media),
+                getString(R.string.android_base_media_hint),
+                com.example.appdemo.demo.media.AndroidMediaActivity::class.java,
+            ),
         )
         /// 获取列表
         val list = findViewById<RecyclerView>(R.id.android_base_list)

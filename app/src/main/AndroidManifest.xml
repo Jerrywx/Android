@@ -307,6 +307,12 @@
         <activity
             android:name=".demo.customview.StickyDropDemoActivity"
             android:exported="false" />
+        <activity
+            android:name=".demo.media.AndroidMediaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.media.TtsReaderDemoActivity"
+            android:exported="false" />
         <service
             android:name=".demo.system.DemoForegroundService"
             android:exported="false"
