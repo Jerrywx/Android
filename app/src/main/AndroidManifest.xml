@@ -271,6 +271,30 @@
         <activity
             android:name=".demo.graphics.SurfaceViewDemoActivity"
             android:exported="false" />
+        <activity
+            android:name=".demo.customview.AndroidCustomViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.customview.CircleProgressDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.customview.FlowLayoutDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.customview.FloatingBallDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.customview.PullToRefreshDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.customview.ClearableEditTextDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.customview.RippleClickDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.customview.StarRatingDemoActivity"
+            android:exported="false" />
         <service
             android:name=".demo.system.DemoForegroundService"
             android:exported="false"

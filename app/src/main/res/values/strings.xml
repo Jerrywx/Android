@@ -514,4 +514,61 @@
     <string name="graphics_surface_desc">SurfaceView 拥有独立的 Surface，绘制在自己的线程里通过 lockCanvas / unlockCanvasAndPost 驱动。适合游戏、粒子、连续动画等不能阻塞主线程的场景。</string>
     <string name="graphics_surface_burst">再来一波</string>
     <string name="graphics_surface_clear">清空</string>
+
+    <!-- ============ CustomView ============ -->
+    <string name="android_base_customview">自定义 View</string>
+    <string name="android_base_customview_hint">进度条 · 流式布局 · 签名板 · 缩放 · 下拉刷新</string>
+    <string name="customview_title">自定义 View</string>
+
+    <string name="customview_circle_progress">圆形进度条</string>
+    <string name="customview_circle_progress_hint">Arc + 渐变 + 中心百分比</string>
+
+    <string name="customview_circle_progress_title">圆形进度条</string>
+    <string name="customview_circle_progress_desc">用 drawArc 画环形轨道，Paint 的 strokeCap = ROUND 让端点圆润；SweepGradient 给进度弧上色；中心 drawText 显示百分比。ValueAnimator 从 0 平滑动画到目标值。</string>
+    <string name="customview_circle_progress_run">重新播放</string>
+    <string name="customview_circle_progress_random">随机进度</string>
+
+    <string name="customview_flow">流式标签布局</string>
+    <string name="customview_flow_hint">ViewGroup 测量 · 换行 · 边距</string>
+    <string name="customview_flow_title">流式标签 FlowLayout</string>
+    <string name="customview_flow_desc">自定义 ViewGroup：onMeasure 中把子 View 按水平方向排布，宽度不够就换行；onLayout 中按每行记录下的位置摆放。支持行间距 / 列间距，兼容 wrap_content 和 EXACTLY 模式。</string>
+    <string name="customview_flow_add">添加标签</string>
+    <string name="customview_flow_reset">重置</string>
+    <string name="customview_flow_input_hint">输入新标签…</string>
+
+    <string name="customview_drag_ball">可拖拽悬浮球</string>
+    <string name="customview_drag_ball_hint">TouchSlop · Velocity · Scroller 贴边</string>
+    <string name="customview_drag_ball_title">可拖拽悬浮球</string>
+    <string name="customview_drag_ball_desc">ACTION_MOVE 中先用 TouchSlop 过滤微小抖动，超过阈值再判定为拖动；抬手时 VelocityTracker 拿到速度，Scroller 做惯性滑行；最后按停下时的横坐标吸附到最近的一条边。父容器边界约束避免飞出屏幕。</string>
+    <string name="customview_drag_ball_center">回到中心</string>
+    <string name="customview_drag_ball_text">拖我</string>
+
+    <string name="customview_refresh">下拉刷新容器</string>
+    <string name="customview_refresh_hint">拦截 · 头部动画 · 回弹</string>
+    <string name="customview_refresh_title">下拉刷新容器</string>
+    <string name="customview_refresh_desc">自定义 ViewGroup 包裹一个可滚动子 View：onInterceptTouchEvent 中在子 View 处于顶部且手指向下滑时拦截；ACTION_MOVE 里带阻尼下拉头部；抬手根据阈值决定回弹或触发刷新。刷新完成用 ValueAnimator 平滑收起头部。</string>
+    <string name="customview_refresh_pull">下拉刷新</string>
+    <string name="customview_refresh_release">松开刷新</string>
+    <string name="customview_refresh_loading">正在刷新…</string>
+    <string name="customview_refresh_done">刷新完成</string>
+
+    <string name="customview_clear_edit">自定义 EditText</string>
+    <string name="customview_clear_edit_hint">清除按钮 · 密码切换 · 自定义属性</string>
+    <string name="customview_clear_edit_title">自定义 EditText</string>
+    <string name="customview_clear_edit_desc">继承 AppCompatEditText：有内容时右侧显示清除图标，点击命中区域清空；密码模式额外支持眼睛图标切换明文/密文。通过 declare-styleable 自定义 app:showClearIcon、app:togglePassword 属性。</string>
+    <string name="customview_clear_edit_normal_hint">带清除按钮</string>
+    <string name="customview_clear_edit_password_hint">支持密码切换</string>
+
+    <string name="customview_ripple">水波纹点击</string>
+    <string name="customview_ripple_hint">多层圆环扩散 · Alpha 衰减</string>
+    <string name="customview_ripple_title">水波纹点击</string>
+    <string name="customview_ripple_desc">点击时在触点生成一圈波纹，用 ValueAnimator 同时驱动半径变大和透明度衰减。多次点击可叠加多个波纹，绘制时遍历活跃波纹分别 drawCircle。</string>
+    <string name="customview_ripple_reset">清空波纹</string>
+
+    <string name="customview_rating">星评分控件</string>
+    <string name="customview_rating_hint">半星 · 拖动打分 · 动画填充</string>
+    <string name="customview_rating_title">星评分控件</string>
+    <string name="customview_rating_desc">用 Path 画出星形并缓存，绘制时先画空心背景，再用 clipRect 裁剪填充部分——支持半星精度。手指按下/拖动时根据 x 坐标换算成 rating，抬手用 ValueAnimator 平滑到目标值。</string>
+    <string name="customview_rating_current">当前评分：%1$.1f</string>
+    <string name="customview_rating_random">随机打分</string>
 </resources>

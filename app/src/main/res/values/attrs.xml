@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ClearableEditText">
+        <attr name="showClearIcon" format="boolean" />
+        <attr name="togglePassword" format="boolean" />
+    </declare-styleable>
+</resources>

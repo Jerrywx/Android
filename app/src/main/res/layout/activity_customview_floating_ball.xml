@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/customview_ball_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/demo_index_bg"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/header_bg"
+        app:contentInsetStart="0dp"
+        app:contentInsetEnd="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="4dp">
+            <ImageButton
+                android:id="@+id/demo_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/chat_back"
+                android:src="@drawable/ic_back" />
+            <TextView
+                android:id="@+id/demo_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingHorizontal="8dp"
+                android:textColor="@color/header_title"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+            <View
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_demo_index_card"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/customview_drag_ball_title"
+            android:textColor="@color/demo_title"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/customview_drag_ball_desc"
+            android:textColor="@color/demo_subtitle"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/customview_ball_stage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="12dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_demo_index_card">
+
+        <com.example.appdemo.demo.customview.widget.FloatingBallView
+            android:id="@+id/customview_ball"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/customview_ball_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/customview_drag_ball_center" />
+</LinearLayout>
