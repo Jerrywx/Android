@@ -364,4 +364,58 @@
     <string name="storage_file_desc">Android 三种常用私有目录：\n· filesDir 内部存储，卸载即清除\n· cacheDir 缓存，系统空间不足可能被清理\n· getExternalFilesDir 外部存储，无需权限，卸载清除</string>
     <string name="storage_file_content_hint">输入要写入的内容</string>
     <string name="storage_file_delete_all">删除全部</string>
+
+    <!-- ============ Jetpack ============ -->
+    <string name="android_base_jetpack">Jetpack</string>
+    <string name="android_base_jetpack_hint">ViewModel · Flow · Navigation · Work · Lifecycle</string>
+    <string name="jetpack_title">Jetpack</string>
+
+    <string name="jetpack_vm">ViewModel + LiveData</string>
+    <string name="jetpack_vm_hint">配置变更保活 · 生命周期感知</string>
+    <string name="jetpack_flow">Flow / StateFlow / SharedFlow</string>
+    <string name="jetpack_flow_hint">冷流 · 热流 · 操作符</string>
+    <string name="jetpack_nav">Navigation Component</string>
+    <string name="jetpack_nav_hint">NavGraph XML + NavHostFragment</string>
+    <string name="jetpack_work">WorkManager</string>
+    <string name="jetpack_work_hint">OneTime · Periodic · 约束</string>
+    <string name="jetpack_lifecycle">Lifecycle Observer</string>
+    <string name="jetpack_lifecycle_hint">DefaultLifecycleObserver / EventObserver</string>
+
+    <string name="jetpack_vm_title">ViewModel + LiveData</string>
+    <string name="jetpack_vm_desc">ViewModel 会在横竖屏切换时保留数据；LiveData 只有在 UI 处于 STARTED/RESUMED 才回调，避免泄漏。点几下加号后旋转屏幕，计数与历史仍在。</string>
+    <string name="jetpack_vm_history_title">📜 变化历史</string>
+    <string name="jetpack_vm_reset">重置</string>
+
+    <string name="jetpack_flow_title">Flow 三兄弟</string>
+    <string name="jetpack_flow_desc">cold Flow 每次 collect 重新执行；StateFlow 是有初始值的热流，新订阅立即拿到最新值；SharedFlow 是无初始值的事件流，可配置 replay。</string>
+    <string name="jp_flow_cold_title">🧊 Cold Flow</string>
+    <string name="jp_flow_cold_run">开始</string>
+    <string name="jp_flow_cold_cancel">取消</string>
+    <string name="jp_flow_state_title">🔥 StateFlow</string>
+    <string name="jp_flow_state_inc">+1</string>
+    <string name="jp_flow_state_reset">重置</string>
+    <string name="jp_flow_shared_title">📣 SharedFlow</string>
+    <string name="jp_flow_shared_emit">emit 事件</string>
+
+    <string name="jp_flow_title">Flow</string>
+    <string name="jp_nav_title">Navigation</string>
+    <string name="jp_nav_home_title">Nav Home</string>
+    <string name="jp_nav_home_desc">在下面输入任意文字，通过 NavGraph 的 action 跳转到详情页，返回栈由 Navigation 自动管理。</string>
+    <string name="jp_nav_input_hint">输入用户名，例如 wangxiao</string>
+    <string name="jp_nav_go">跳转到 Detail</string>
+    <string name="jp_nav_detail_title">Nav Detail</string>
+    <string name="jetpack_nav_detail_info">userId=%1$d\nuserName=%2$s</string>
+    <string name="jp_nav_back">返回上一页</string>
+
+    <string name="jetpack_work_title">WorkManager</string>
+    <string name="jetpack_work_desc">WorkManager 保证任务最终会跑：进程被杀后重启依旧执行。CoroutineWorker 支持 suspend，最短周期任务为 15 分钟。</string>
+    <string name="jp_work_one">入队 OneTimeWork</string>
+    <string name="jp_work_periodic">入队 15 分钟周期任务</string>
+    <string name="jp_work_constraint">带约束（联网 + 电量）</string>
+    <string name="jp_work_cancel">取消全部</string>
+
+    <string name="jetpack_lifecycle_title">Lifecycle Observer</string>
+    <string name="jetpack_lifecycle_desc">让任意对象感知宿主的生命周期。DefaultLifecycleObserver 按方法分类，LifecycleEventObserver 统一 event 回调。切到后台观察日志。</string>
+    <string name="jp_lc_state">读取当前 state</string>
+    <string name="jp_lc_clear">清空日志</string>
 </resources>

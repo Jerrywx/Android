@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_jetpack"
+    app:startDestination="@id/navHomeFragment">
+
+    <fragment
+        android:id="@+id/navHomeFragment"
+        android:name="com.example.appdemo.demo.jetpack.NavHomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_nav_home"
+        xmlns:tools="http://schemas.android.com/tools">
+        <action
+            android:id="@+id/action_home_to_detail"
+            app:destination="@id/navDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navDetailFragment"
+        android:name="com.example.appdemo.demo.jetpack.NavDetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_nav_detail"
+        xmlns:tools="http://schemas.android.com/tools">
+        <argument
+            android:name="userId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="userName"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+</navigation>
