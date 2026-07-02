@@ -65,6 +65,26 @@ class AndroidCustomViewActivity : AppCompatActivity() {
                 getString(R.string.customview_rating_hint),
                 StarRatingDemoActivity::class.java,
             ),
+            NavItem(
+                getString(R.string.customview_wave),
+                getString(R.string.customview_wave_hint),
+                WaveDemoActivity::class.java,
+            ),
+            NavItem(
+                getString(R.string.customview_sticky),
+                getString(R.string.customview_sticky_hint),
+                StickyDropDemoActivity::class.java,
+            ),
+            NavItem(
+                getString(R.string.customview_dashboard),
+                getString(R.string.customview_dashboard_hint),
+                DashboardDemoActivity::class.java,
+            ),
+            NavItem(
+                getString(R.string.customview_ruler),
+                getString(R.string.customview_ruler_hint),
+                RulerDemoActivity::class.java,
+            ),
         )
 
         val list = findViewById<RecyclerView>(R.id.android_customview_list)

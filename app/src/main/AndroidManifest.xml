@@ -295,6 +295,18 @@
         <activity
             android:name=".demo.customview.StarRatingDemoActivity"
             android:exported="false" />
+        <activity
+            android:name=".demo.customview.RulerDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.customview.DashboardDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.customview.WaveDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.customview.StickyDropDemoActivity"
+            android:exported="false" />
         <service
             android:name=".demo.system.DemoForegroundService"
             android:exported="false"

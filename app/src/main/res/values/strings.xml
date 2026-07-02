@@ -571,4 +571,32 @@
     <string name="customview_rating_desc">用 Path 画出星形并缓存，绘制时先画空心背景，再用 clipRect 裁剪填充部分——支持半星精度。手指按下/拖动时根据 x 坐标换算成 rating，抬手用 ValueAnimator 平滑到目标值。</string>
     <string name="customview_rating_current">当前评分：%1$.1f</string>
     <string name="customview_rating_random">随机打分</string>
+
+    <string name="customview_ruler">刻度尺 View</string>
+    <string name="customview_ruler_hint">横向滚动 · 惯性 · 吸附</string>
+    <string name="customview_ruler_title">刻度尺 View</string>
+    <string name="customview_ruler_desc">横向刻度尺：VelocityTracker 拿到抬手速度，Scroller.fling 做惯性滑行；停下后吸附到最近整格。核心在 pixel ↔ value 的双向换算，中心线始终对齐当前值。</string>
+    <string name="customview_ruler_current">当前身高：%1$d cm</string>
+    <string name="customview_ruler_reset">回到 170</string>
+    <string name="customview_ruler_random">随机身高</string>
+
+    <string name="customview_wave">贝塞尔曲线波浪</string>
+    <string name="customview_wave_hint">Path.quadTo · 双层叠加 · 横向滚动</string>
+    <string name="customview_wave_title">贝塞尔曲线波浪</string>
+    <string name="customview_wave_desc">用 Path.quadTo 拼接波峰和波谷，一段二阶贝塞尔就是半个波长。ValueAnimator 无限循环驱动横向位移，前后两层相位错开，颜色半透明叠加形成层次感。SeekBar 控制水位（波浪静止基线）。</string>
+    <string name="customview_wave_random">随机水位</string>
+
+    <string name="customview_dashboard">仪表盘</string>
+    <string name="customview_dashboard_hint">270° 弧 · 刻度 · 指针 · 渐变</string>
+    <string name="customview_dashboard_title">仪表盘</string>
+    <string name="customview_dashboard_desc">起始角 135°、扫过 270° 的弧形轨道；SweepGradient 分三段绿-黄-红渲染进度。沿弧用 sin/cos 计算主/次刻度端点与数字位置；指针从中心向外画一条线，末端配一个圆头。ValueAnimator 平滑到目标值。</string>
+    <string name="customview_dashboard_random">随机速度</string>
+    <string name="customview_dashboard_zero">归零</string>
+
+    <string name="customview_sticky">粘性水滴</string>
+    <string name="customview_sticky_hint">两圆连接 · 拉伸 · 断裂 · 回弹</string>
+    <string name="customview_sticky_title">粘性水滴</string>
+    <string name="customview_sticky_desc">两个圆之间用两条对称的二阶贝塞尔连出"腰身"，控制点取两圆心中点。拖动距离越大，固定圆半径线性收缩，模拟被拉细；超过阈值判定断裂，此后只画拖拽圆。未断裂时抬手用 OvershootInterpolator 弹回原位。</string>
+    <string name="customview_sticky_reset">重置</string>
+    <string name="customview_sticky_burst">拖走了 · 红点已清</string>
 </resources>
