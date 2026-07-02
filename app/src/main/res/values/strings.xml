@@ -473,4 +473,45 @@
     <string name="sys_hd_delay">主线程 postDelayed 2s</string>
     <string name="sys_hd_bg">HandlerThread 后台任务</string>
     <string name="sys_hd_cancel">取消所有消息</string>
+
+    <!-- ============ Graphics ============ -->
+    <string name="android_base_graphics">图形绘制</string>
+    <string name="android_base_graphics_hint">Canvas · Path · PorterDuff · Shader · 缩放 · SurfaceView</string>
+    <string name="graphics_title">图形绘制</string>
+
+    <string name="graphics_canvas">Canvas 基础</string>
+    <string name="graphics_canvas_hint">Paint · save/restore · 变换栈</string>
+    <string name="graphics_path">Path 签名板</string>
+    <string name="graphics_path_hint">moveTo · quadTo · 撤销 / 清空</string>
+    <string name="graphics_porterduff">PorterDuff 刮刮卡</string>
+    <string name="graphics_porterduff_hint">Xfermode CLEAR · saveLayer</string>
+    <string name="graphics_shader">Shader 渐变</string>
+    <string name="graphics_shader_hint">Linear · Sweep · Radial</string>
+    <string name="graphics_zoom">双指缩放</string>
+    <string name="graphics_zoom_hint">ScaleGestureDetector + Matrix</string>
+    <string name="graphics_surface">SurfaceView 粒子</string>
+    <string name="graphics_surface_hint">独立渲染线程 · lockCanvas</string>
+
+    <string name="graphics_canvas_title">Canvas 基础</string>
+    <string name="graphics_canvas_desc">下面这个走时的表盘覆盖了大多数 Canvas API：drawCircle / drawLine / drawText、save/restore + rotate 变换栈、Paint 的 style/strokeCap/antiAlias。每秒 invalidate 一次驱动重绘。</string>
+
+    <string name="graphics_path_title">Path 签名板</string>
+    <string name="graphics_path_desc">用 Path 记录手指轨迹。ACTION_MOVE 中用 quadTo(lastX, lastY, midX, midY) 做平滑贝塞尔，抬手后 Path 存入历史，可撤销 / 清空。</string>
+    <string name="graphics_path_undo">撤销</string>
+    <string name="graphics_path_clear">清空</string>
+
+    <string name="graphics_porterduff_title">PorterDuff 刮刮卡</string>
+    <string name="graphics_porterduff_desc">先画底层奖品，再画一层灰色 mask Bitmap，手指经过用 Xfermode.CLEAR 擦除 mask，露出底部。这是 PorterDuff 混合模式最经典的用法。</string>
+    <string name="graphics_porterduff_reset">重新覆盖</string>
+
+    <string name="graphics_shader_title">Shader 渐变</string>
+    <string name="graphics_shader_desc">Shader 用于填充 Paint。LinearGradient 直线过渡；SweepGradient 绕中心 360° 扫描；RadialGradient 从中心向外辐射。Shader 也可以是 BitmapShader，做圆头像等效果。</string>
+
+    <string name="graphics_zoom_title">双指缩放</string>
+    <string name="graphics_zoom_desc">ScaleGestureDetector 处理双指 pinch，GestureDetector 处理单指拖动 + 双击复位。变换全部通过 Matrix 施加，setImageMatrix 应用到 ImageView。</string>
+
+    <string name="graphics_surface_title">SurfaceView 粒子</string>
+    <string name="graphics_surface_desc">SurfaceView 拥有独立的 Surface，绘制在自己的线程里通过 lockCanvas / unlockCanvasAndPost 驱动。适合游戏、粒子、连续动画等不能阻塞主线程的场景。</string>
+    <string name="graphics_surface_burst">再来一波</string>
+    <string name="graphics_surface_clear">清空</string>
 </resources>

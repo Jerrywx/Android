@@ -250,6 +250,27 @@
         <service
             android:name=".demo.system.DemoBoundService"
             android:exported="false" />
+        <activity
+            android:name=".demo.graphics.AndroidGraphicsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.graphics.CanvasBasicDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.graphics.PathDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.graphics.PorterDuffDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.graphics.ShaderDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.graphics.ZoomImageDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.graphics.SurfaceViewDemoActivity"
+            android:exported="false" />
         <service
             android:name=".demo.system.DemoForegroundService"
             android:exported="false"
