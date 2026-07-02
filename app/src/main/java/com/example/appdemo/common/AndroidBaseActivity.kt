@@ -90,6 +90,11 @@ class AndroidBaseActivity : AppCompatActivity() {
                 getString(R.string.android_base_jetpack_hint),
                 com.example.appdemo.demo.jetpack.AndroidJetpackActivity::class.java,
             ),
+            NavItem(
+                getString(R.string.android_base_system),
+                getString(R.string.android_base_system_hint),
+                com.example.appdemo.demo.system.AndroidSystemActivity::class.java,
+            ),
         )
         /// 获取列表
         val list = findViewById<RecyclerView>(R.id.android_base_list)

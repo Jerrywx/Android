@@ -418,4 +418,59 @@
     <string name="jetpack_lifecycle_desc">让任意对象感知宿主的生命周期。DefaultLifecycleObserver 按方法分类，LifecycleEventObserver 统一 event 回调。切到后台观察日志。</string>
     <string name="jp_lc_state">读取当前 state</string>
     <string name="jp_lc_clear">清空日志</string>
+
+    <!-- ============ System 系统能力 ============ -->
+    <string name="android_base_system">系统能力</string>
+    <string name="android_base_system_hint">权限 · 通知 · Service · 广播 · Handler</string>
+    <string name="system_title">系统能力</string>
+
+    <string name="system_permission">权限动态申请</string>
+    <string name="system_permission_hint">ActivityResult API · 单权限 / 多权限</string>
+    <string name="system_notification">通知</string>
+    <string name="system_notification_hint">Channel · BigText · Action · 进度</string>
+    <string name="system_service">Service</string>
+    <string name="system_service_hint">startService · bindService · 前台 Service</string>
+    <string name="system_broadcast">BroadcastReceiver</string>
+    <string name="system_broadcast_hint">动态注册 · 应用内 · LocalBroadcast</string>
+    <string name="system_handler">Handler · Looper</string>
+    <string name="system_handler_hint">主线程 Handler · HandlerThread</string>
+
+    <string name="system_permission_title">权限动态申请</string>
+    <string name="system_permission_desc">运行时权限使用 registerForActivityResult(RequestPermission()) 申请。用户勾选\"不再询问\"后，只能引导到系统设置页手动开启。</string>
+    <string name="sys_perm_camera">申请相机权限</string>
+    <string name="sys_perm_multi">申请定位 + 通知</string>
+    <string name="sys_perm_settings">跳到系统设置页</string>
+
+    <string name="system_notification_title">通知</string>
+    <string name="system_notification_desc">Android 8+ 必须先创建 NotificationChannel 才能发通知；Android 13+ 需要 POST_NOTIFICATIONS 运行时权限。这里演示 4 种样式。</string>
+    <string name="sys_noti_perm">申请 POST_NOTIFICATIONS</string>
+    <string name="sys_noti_basic">普通通知</string>
+    <string name="sys_noti_big">大文本通知</string>
+    <string name="sys_noti_action">带按钮的通知</string>
+    <string name="sys_noti_progress">进度条通知</string>
+    <string name="sys_noti_cancel">清除全部</string>
+
+    <string name="system_service_title">Service</string>
+    <string name="system_service_desc">startService 单向启动；bindService 拿到 IBinder 双向调用；前台 Service 必须常驻通知（音乐/位置等场景）。</string>
+    <string name="sys_service_started">1. startService（发射后不管）</string>
+    <string name="sys_service_start">start</string>
+    <string name="sys_service_stop">stop</string>
+    <string name="sys_service_bound">2. bindService（拿到 Binder 调用）</string>
+    <string name="sys_service_bind">bind</string>
+    <string name="sys_service_ask">ping 一次</string>
+    <string name="sys_service_unbind">unbind</string>
+    <string name="sys_service_foreground_title">3. 前台 Service</string>
+    <string name="sys_service_foreground">启动前台 Service</string>
+    <string name="sys_service_foreground_stop">停止前台 Service</string>
+
+    <string name="system_broadcast_title">BroadcastReceiver</string>
+    <string name="system_broadcast_desc">Android 8+ 后隐式广播的静态注册基本无效。这里演示动态注册 + 显式 sendBroadcast，以及 LocalBroadcastManager（进程内广播）。</string>
+    <string name="sys_bc_app_send">发送应用内广播</string>
+    <string name="sys_bc_local_send">发送 LocalBroadcast</string>
+
+    <string name="system_handler_title">Handler · Looper</string>
+    <string name="system_handler_desc">Handler 挂在 Looper 上处理消息。HandlerThread 是自带 Looper 的后台线程，适合串行处理。协程能覆盖多数场景，但 View 系统内部仍靠 Handler。</string>
+    <string name="sys_hd_delay">主线程 postDelayed 2s</string>
+    <string name="sys_hd_bg">HandlerThread 后台任务</string>
+    <string name="sys_hd_cancel">取消所有消息</string>
 </resources>

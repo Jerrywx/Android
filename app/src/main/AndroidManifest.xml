@@ -4,6 +4,12 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
 
     <application
         android:allowBackup="true"
@@ -218,6 +224,36 @@
         <activity
             android:name=".demo.jetpack.LifecycleDemoActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".demo.system.AndroidSystemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.system.PermissionDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.system.NotificationDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.system.ServiceDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.system.BroadcastDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.system.HandlerDemoActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".demo.system.DemoStartedService"
+            android:exported="false" />
+        <service
+            android:name=".demo.system.DemoBoundService"
+            android:exported="false" />
+        <service
+            android:name=".demo.system.DemoForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
     </application>
 
 </manifest>
