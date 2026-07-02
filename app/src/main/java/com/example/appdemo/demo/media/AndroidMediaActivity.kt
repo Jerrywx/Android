@@ -35,6 +35,11 @@ class AndroidMediaActivity : AppCompatActivity() {
                 getString(R.string.media_tts_hint),
                 TtsReaderDemoActivity::class.java,
             ),
+            NavItem(
+                getString(R.string.media_lrc),
+                getString(R.string.media_lrc_hint),
+                LrcPlayerDemoActivity::class.java,
+            ),
         )
 
         val list = findViewById<RecyclerView>(R.id.android_media_list)

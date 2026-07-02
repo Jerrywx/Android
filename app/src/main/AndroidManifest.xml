@@ -313,6 +313,9 @@
         <activity
             android:name=".demo.media.TtsReaderDemoActivity"
             android:exported="false" />
+        <activity
+            android:name=".demo.media.LrcPlayerDemoActivity"
+            android:exported="false" />
         <service
             android:name=".demo.system.DemoForegroundService"
             android:exported="false"

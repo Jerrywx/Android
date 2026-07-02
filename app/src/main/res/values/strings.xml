@@ -617,4 +617,14 @@
     <string name="media_tts_init_failed">TTS 初始化失败，请检查设备语音引擎</string>
     <string name="media_tts_error">朗读出错</string>
     <string name="media_tts_content">从百草园到三味书屋（节选） · 鲁迅\n\n我家的后面有一个很大的园，相传叫作百草园。现在是早已并屋子一起卖给朱文公的子孙了，连那最末次的相见也已经隔了七八年，其中似乎确凿只有一些野草；但那时却是我的乐园。\n\n不必说碧绿的菜畦，光滑的石井栏，高大的皂荚树，紫红的桑葚；也不必说鸣蝉在树叶里长吟，肥胖的黄蜂伏在菜花上，轻捷的叫天子（云雀）忽然从草间直窜向云霄里去了。单是周围的短短的泥墙根一带，就有无限趣味。\n\n油蛉在这里低唱，蟋蟀们在这里弹琴。翻开断砖来，有时会遇见蜈蚣；还有斑蝥，倘若用手指按住它的脊梁，便会啪的一声，从后窍喷出一阵烟雾。\n\n何首乌藤和木莲藤缠络着，木莲有莲房一般的果实，何首乌有臃肿的根。有人说，何首乌根是有像人形的，吃了便可以成仙，我于是常常拔它起来，牵连不断地拔起来，也曾因此弄坏了泥墙，却从来没有见过有一块根像人样。\n\n如果不怕刺，还可以摘到覆盆子，像小珊瑚珠攒成的小球，又酸又甜，色味都比桑葚要好得远。</string>
+
+    <string name="media_lrc">MediaPlayer + LRC</string>
+    <string name="media_lrc_hint">音频播放 · LRC 解析 · 逐句跟随 · 双向 seek</string>
+    <string name="media_lrc_title">MediaPlayer + LRC</string>
+    <string name="media_lrc_desc">MediaPlayer 播放本地 mp3，Handler 100ms 轮询 currentPosition。内置一段 LRC，自研 LrcParser 支持 [mm:ss.xx] 与多时间戳复用，LrcView 自绘滚动、拖动指示当前时间、tap 直接 seek。首次进入点"选择音频"挑一段自己的 mp3 即可（建议时长 12s 起，LRC 内置的是《静夜思》节奏）。</string>
+    <string name="media_lrc_pick">选择音频</string>
+    <string name="media_lrc_play">播放</string>
+    <string name="media_lrc_pause">暂停</string>
+    <string name="media_lrc_unknown_title">未命名</string>
+    <string name="media_lrc_load_failed">音频加载失败，换一个文件试试</string>
 </resources>
