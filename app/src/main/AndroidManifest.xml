@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
         android:allowBackup="true"
@@ -244,12 +245,25 @@
             android:name=".demo.system.HandlerDemoActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".demo.study.AndroidStudyActivity"
+            android:exported="false" />
+        <service
+            android:name=".demo.study.FloatingBallService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="floating_ball_overlay" />
+        </service>
+
         <service
             android:name=".demo.system.DemoStartedService"
             android:exported="false" />
         <service
             android:name=".demo.system.DemoBoundService"
             android:exported="false" />
+
         <activity
             android:name=".demo.graphics.AndroidGraphicsActivity"
             android:exported="false" />

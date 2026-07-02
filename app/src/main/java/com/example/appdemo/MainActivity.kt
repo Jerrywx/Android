@@ -4,8 +4,11 @@ import com.example.appdemo.tabs.WeChatFragment
 import com.example.appdemo.tabs.ContactsFragment
 import com.example.appdemo.tabs.DiscoverFragment
 import com.example.appdemo.tabs.MeFragment
+import com.example.appdemo.demo.study.FloatingBallService
 
 import android.os.Bundle
+import android.provider.Settings
+import android.os.Build
 import android.view.View
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -52,6 +55,16 @@ class MainActivity : AppCompatActivity() {
             override fun onPageSelected(position: Int) = updateSelection(position)
         })
         updateSelection(0)
+
+        // 启动后自动显示悬浮球（如有权限）
+        tryStartFloatingBall()
+    }
+
+    private fun tryStartFloatingBall() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.canDrawOverlays(this)) return
+        try {
+            FloatingBallService.start(this)
+        } catch (_: Exception) { }
     }
 
     private fun applyInsets() {

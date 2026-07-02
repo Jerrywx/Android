@@ -13,6 +13,9 @@
     <string name="search_hint">搜索</string>
 
     <string name="android_study_title">Android</string>
+    <string name="android_study_label">Android 学习</string>
+    <string name="android_base_floating_ball">全局悬浮球</string>
+    <string name="android_base_floating_ball_hint">系统级悬浮窗 · 拖动贴边 · 前台Service</string>
     <string name="android_base_title">Android 基础</string>
     <string name="android_base_recycler_view">RecyclerView</string>
     <string name="android_base_recycler_view_hint">RecyclerView 全部示例</string>

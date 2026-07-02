@@ -12,6 +12,7 @@ import com.example.appdemo.demo.viewpager.*
 import com.example.appdemo.demo.recyclerview.*
 import com.example.appdemo.demo.recyclerview.chat.*
 import com.example.appdemo.demo.fragment.*
+import com.example.appdemo.demo.study.AndroidStudyActivity
 
 import android.content.Intent
 import android.os.Bundle
@@ -109,6 +110,11 @@ class AndroidBaseActivity : AppCompatActivity() {
                 getString(R.string.android_base_media),
                 getString(R.string.android_base_media_hint),
                 com.example.appdemo.demo.media.AndroidMediaActivity::class.java,
+            ),
+            NavItem(
+                getString(R.string.android_base_floating_ball),
+                getString(R.string.android_base_floating_ball_hint),
+                AndroidStudyActivity::class.java,
             ),
         )
         /// 获取列表
