@@ -132,10 +132,17 @@ class AndroidBaseActivity : AppCompatActivity() {
 
         /// 主要作用是创建并返回一个新的 ViewHolder 实例
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
+            /// 创建 ViewHolder 实例
+            /// 1. 为了封装数据，避免外部直接修改数据
+            /// 2) 为了封装事件，避免外部直接调用事件
+            /// LayoutInflater 是干什么用的？
             val view = LayoutInflater.from(parent.context).inflate(R.layout.item_study_entry, parent, false)
+            /// 返回 ViewHolder 实例
             return VH(view)
         }
+        /// 获取列表项的个数
         override fun getItemCount(): Int = items.size
+        /// 绑定数据
         override fun onBindViewHolder(holder: VH, position: Int) =
             holder.bind(items[position], position + 1, onClick)
 
