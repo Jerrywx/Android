@@ -646,4 +646,43 @@
     <string name="media_lrc_pause">暂停</string>
     <string name="media_lrc_unknown_title">未命名</string>
     <string name="media_lrc_load_failed">音频加载失败，换一个文件试试</string>
+
+    <!-- ============ JSON / 字符串处理 ============ -->
+    <string name="android_base_json">字符串 &amp; JSON</string>
+    <string name="android_base_json_hint">拼接 · 格式化 · 正则 · JSONObject · Gson · 流式</string>
+    <string name="json_title">字符串 &amp; JSON</string>
+    <string name="json_log_title">📜 输出</string>
+    <string name="json_log_hint">点击按钮查看结果</string>
+    <string name="json_sample_title">📄 示例 JSON</string>
+
+    <string name="json_string_ops">字符串常用操作</string>
+    <string name="json_string_ops_hint">拼接 · 格式化 · 分割 · 替换 · 正则 · 编码</string>
+    <string name="json_string_ops_title">字符串常用操作</string>
+    <string name="json_string_ops_desc">覆盖 Android 开发中最常见的字符串场景：+ / StringBuilder / joinToString 三种拼接；String.format 与 Kotlin 模板；split、substring、take/drop；普通替换 vs 正则替换；trim / uppercase / isNullOrBlank；Base64 / URL / MD5 编码与哈希。</string>
+    <string name="json_string_format_res">从资源取模板：hi %1$s，长度=%2$d</string>
+
+    <string name="json_object">JSONObject / JSONArray</string>
+    <string name="json_object_hint">Android 内置 org.json 手写解析</string>
+    <string name="json_object_title">JSONObject / JSONArray</string>
+    <string name="json_object_desc">Android 系统内置 org.json，无需引三方库。put 链式构造；getX 缺字段抛异常，optX 系列带默认值更安全；toString(indent) 可以美化输出；keys() 遍历所有键。</string>
+
+    <string name="json_gson">Gson 序列化 / 反序列化</string>
+    <string name="json_gson_hint">数据类 · @SerializedName · TypeToken</string>
+    <string name="json_gson_title">Gson 序列化 / 反序列化</string>
+    <string name="json_gson_desc">Gson 通过 retrofit-converter-gson 已经间接引入。data class 直接映射；@SerializedName 处理字段名不一致；TypeToken 保留泛型信息解析 List / Map；GsonBuilder 可配置美化输出、序列化 null 等。</string>
+
+    <string name="json_nested">复杂嵌套 JSON</string>
+    <string name="json_nested_hint">多层对象 · 数组混合 · 手写 vs Gson 对比</string>
+    <string name="json_nested_title">复杂嵌套 JSON</string>
+    <string name="json_nested_desc">真实业务里的 JSON 通常是多层嵌套：envelope + user + orders + items。此案例并排展示两种解法——JSONObject 逐层手写 vs Gson 数据类一次映射，并给出汇总统计。</string>
+
+    <string name="json_stream">JsonReader 流式解析</string>
+    <string name="json_stream_hint">android.util.JsonReader · 边读边解析</string>
+    <string name="json_stream_title">JsonReader 流式解析</string>
+    <string name="json_stream_desc">JsonReader 逐 token 前进，内存占用极低。适合几十 MB 的大 JSON 或只关心少数字段的场景：不需要的字段调 skipValue() 跳过，无需构造完整对象树。</string>
+
+    <string name="json_assets">从 assets 读取 JSON</string>
+    <string name="json_assets_hint">本地资源文件 · 城市列表 mock</string>
+    <string name="json_assets_title">从 assets 读取 JSON</string>
+    <string name="json_assets_desc">context.assets.open(fileName) 得到 InputStream，再用 bufferedReader().use{} 读取全文。常见于内置城市列表、默认配置、首次启动 mock 数据落库等场景。示例读取 assets/cities.json。</string>
 </resources>

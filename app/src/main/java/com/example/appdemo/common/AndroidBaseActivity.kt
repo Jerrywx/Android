@@ -112,6 +112,11 @@ class AndroidBaseActivity : AppCompatActivity() {
                 com.example.appdemo.demo.media.AndroidMediaActivity::class.java,
             ),
             NavItem(
+                getString(R.string.android_base_json),
+                getString(R.string.android_base_json_hint),
+                com.example.appdemo.demo.json.AndroidJsonActivity::class.java,
+            ),
+            NavItem(
                 getString(R.string.android_base_floating_ball),
                 getString(R.string.android_base_floating_ball_hint),
                 AndroidStudyActivity::class.java,

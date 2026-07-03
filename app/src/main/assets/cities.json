@@ -1,0 +1,10 @@
+[
+  {"code": "BJ", "name": "北京", "province": "北京", "population": 2189},
+  {"code": "SH", "name": "上海", "province": "上海", "population": 2487},
+  {"code": "GZ", "name": "广州", "province": "广东", "population": 1868},
+  {"code": "SZ", "name": "深圳", "province": "广东", "population": 1756},
+  {"code": "HZ", "name": "杭州", "province": "浙江", "population": 1237},
+  {"code": "NJ", "name": "南京", "province": "江苏", "population": 942},
+  {"code": "CD", "name": "成都", "province": "四川", "population": 2119},
+  {"code": "WH", "name": "武汉", "province": "湖北", "population": 1364}
+]

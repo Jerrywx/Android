@@ -333,6 +333,28 @@
         <activity
             android:name=".demo.media.LrcPlayerDemoActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".demo.json.AndroidJsonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.json.StringOpsDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.json.JsonObjectDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.json.GsonDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.json.NestedJsonDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.json.JsonStreamDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.json.JsonAssetsDemoActivity"
+            android:exported="false" />
         <service
             android:name=".demo.system.DemoForegroundService"
             android:exported="false"

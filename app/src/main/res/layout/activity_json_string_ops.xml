@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/json_string_ops_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/demo_index_bg"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/header_bg"
+        app:contentInsetStart="0dp"
+        app:contentInsetEnd="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="4dp">
+            <ImageButton
+                android:id="@+id/demo_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/chat_back"
+                android:src="@drawable/ic_back" />
+            <TextView
+                android:id="@+id/demo_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingHorizontal="8dp"
+                android:textColor="@color/header_title"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+            <View
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/json_string_ops_title"
+                    android:textColor="@color/demo_title"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="@string/json_string_ops_desc"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="✍️ 输入内容（可选，为空使用默认演示）"
+                    android:textColor="@color/demo_title"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/et_string_ops_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_demo_index_card"
+                    android:hint="任意字符串"
+                    android:inputType="text"
+                    android:padding="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/btn_string_concat"
+                        style="@style/AnimDemoBtnPrimary"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="1. 拼接" />
+                    <TextView
+                        android:id="@+id/btn_string_format"
+                        style="@style/AnimDemoBtnPrimary"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="2. 格式化" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/btn_string_split"
+                        style="@style/AnimDemoBtnPrimary"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="3. 分割截取" />
+                    <TextView
+                        android:id="@+id/btn_string_replace"
+                        style="@style/AnimDemoBtnPrimary"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="4. 替换" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/btn_string_case"
+                        style="@style/AnimDemoBtnPrimary"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="5. 大小写/空白" />
+                    <TextView
+                        android:id="@+id/btn_string_regex"
+                        style="@style/AnimDemoBtnPrimary"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="6. 正则" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/btn_string_encode"
+                        style="@style/AnimDemoBtnPrimary"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="7. 编码/哈希" />
+                    <TextView
+                        android:id="@+id/btn_string_clear"
+                        style="@style/AnimDemoBtnSecondary"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/storage_action_clear" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_demo_index_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/json_log_title"
+                    android:textColor="@color/demo_title"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tv_string_ops_log"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="2dp"
+                    android:text="@string/json_log_hint"
+                    android:textColor="@color/demo_subtitle"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
