@@ -248,6 +248,9 @@
         <activity
             android:name=".demo.study.AndroidStudyActivity"
             android:exported="false" />
+        <activity
+            android:name=".androidstudy.basic.AndroidBasicActivity"
+            android:exported="false" />
         <service
             android:name=".demo.study.FloatingBallService"
             android:exported="false"

@@ -12,6 +12,7 @@ import com.example.appdemo.demo.viewpager.*
 import com.example.appdemo.demo.recyclerview.*
 import com.example.appdemo.demo.recyclerview.chat.*
 import com.example.appdemo.demo.fragment.*
+import com.example.appdemo.androidstudy.basic.AndroidBasicActivity
 
 import android.content.Context
 import android.content.Intent
@@ -54,7 +55,7 @@ class WeChatFragment : Fragment(R.layout.fragment_wechat) {
             Toast.makeText(view.context, "星标", Toast.LENGTH_SHORT).show()
         }
         view.findViewById<ImageButton>(R.id.btn_plus).setOnClickListener {
-            Toast.makeText(view.context, "添加", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(view.context, AndroidBasicActivity::class.java))
         }
     }
 
