@@ -2,23 +2,53 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:id="@+id/basic_card"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_width="match_parent"
 
-    <TextView
-        android:id="@+id/basic_index"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    android:layout_height="120dp">
 
-    <TextView
-        android:id="@+id/basic_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"/>
-    <TextView
-        android:id="@+id/basic_subtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"/>
+    <ImageView
+        android:id="@+id/book_cover"
+        android:layout_marginTop="10dp"
+        android:layout_width="70dp"
+        android:layout_height="100dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/book_name"
+            android:textColor="@color/titleColor"
+            android:text="书籍名称"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/book_description"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/subTitleColor"
+            android:text="书籍描述"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/boot_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/otherTitleColor"
+            android:text="haha "
+            android:textSize="16sp"/>
+
+    </LinearLayout>
 
 </LinearLayout>

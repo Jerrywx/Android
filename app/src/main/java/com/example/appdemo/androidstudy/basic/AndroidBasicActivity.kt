@@ -1,17 +1,23 @@
 package com.example.appdemo.androidstudy.basic
 
+import android.content.ClipDescription
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appdemo.R
+import com.bumptech.glide.Glide
 import com.example.appdemo.common.setupDemoToolbar
+import com.google.gson.Gson
+import kotlin.random.Random
 
 class AndroidBasicActivity : AppCompatActivity() {
 
@@ -19,6 +25,8 @@ class AndroidBasicActivity : AppCompatActivity() {
     private data class ItemModel(
         val title: String,
         val content: String,
+        val description: String,
+        val bookCover: String,
         val target: Class<*>
     )
 
@@ -28,15 +36,19 @@ class AndroidBasicActivity : AppCompatActivity() {
         setContentView(R.layout.activity_android_basic)
         setupDemoToolbar(R.string.android_basic_title, R.id.android_basic_root)
 
-        ///
-        val entries = listOf<ItemModel>(
-            ItemModel("Android 基础", "Android 基础", AndroidBasicActivity::class.java),
-            ItemModel("Android 基础", "Android 基础", AndroidBasicActivity::class.java),
-            ItemModel("Android 基础", "Android 基础", AndroidBasicActivity::class.java),
-            ItemModel("Android 基础", "Android 基础", AndroidBasicActivity::class.java),
-            ItemModel("Android 基础", "Android 基础", AndroidBasicActivity::class.java),
-            ItemModel("Android 基础", "Android 基础", AndroidBasicActivity::class.java),
-        )
+        /// 从 assets/books.json 中加载并解析为 List<BookModel>
+        val books = loadBooks()
+
+        /// 将 BookModel 映射为列表使用的 ItemModel
+        val entries = books.map { book ->
+            ItemModel(
+                title = book.name,
+                content = "${book.authorName} · ${book.categoryName} · ${book.chapterCount}章",
+                description = book.description,
+                bookCover = book.picUrl,
+                target = AndroidBasicActivity::class.java
+            )
+        }
 
         /// 创建 RecyclerView
         val recyclerView = findViewById<androidx.recyclerview.widget.RecyclerView>(R.id.android_basic_list)
@@ -45,6 +57,15 @@ class AndroidBasicActivity : AppCompatActivity() {
             startActivity(Intent(this, it.target))
         })
 
+    }
+
+    /// 从 assets/books.json 读取并解析为 List<BookModel>
+    /// 参考 JsonAssetsDemoActivity 的读取风格
+    private fun loadBooks(): List<BookModel> {
+        val text = assets.open("books.json").bufferedReader(Charsets.UTF_8).use { it.readText() }
+        val response = Gson().fromJson(text, BookListResponse::class.java)
+        /// 外层 result 是 List<BookItem>，每个 BookItem 里的 result 才是 BookModel
+        return response.result.mapNotNull { it.result }
     }
 
     /// 创建 Adapter, 为什么两个参数 entries 和 listener 都是 private 的？
@@ -80,14 +101,35 @@ class AndroidBasicActivity : AppCompatActivity() {
 //                card.setOnClickListener { onClick(item) }
 //            }
             private val card: View = view.findViewById(R.id.basic_card)
-            private val index: TextView = view.findViewById(R.id.basic_index)
-            private val title: TextView = view.findViewById(R.id.basic_title)
-            private val subtitle: TextView = view.findViewById(R.id.basic_subtitle)
+            private val bookName: TextView = view.findViewById(R.id.book_name)
+            private val bookdesc: TextView = view.findViewById(R.id.book_description)
+            private val bookCover: ImageView = view.findViewById(R.id.book_cover)
+            private val bookAuthor: TextView = view.findViewById(R.id.boot_author)
+
+            /// 给 card 设置随机色
+            private fun setRandomColor() {
+                card.setBackgroundColor(
+                    Color.rgb(
+                        Random.nextInt(256),
+                        Random.nextInt(256),
+                        Random.nextInt(256),
+                    )
+                )
+            }
+
             fun bind(item: ItemModel, no: Int, onClick: (ItemModel) -> Unit) {
-                index.text = no.toString()
-                title.text = item.title
-                subtitle.text = item.content
+                bookName.text = item.title
+                bookdesc.text = item.description
+                bookAuthor.text = item.content
+
+                /// 使用 Glide 加载封面图
+                Glide.with(bookCover)
+                    .load(item.bookCover)
+                    .centerCrop()
+                    .into(bookCover)
+
                 card.setOnClickListener { onClick(item) }
+//                setRandomColor()
             }
         }
     }
