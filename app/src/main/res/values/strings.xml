@@ -8,6 +8,21 @@
     <string name="tab_discover">发现</string>
     <string name="tab_me">我</string>
 
+    <!-- Me 页 -->
+    <string name="me_nickname">王潇</string>
+    <string name="me_wxid">微信号：wxiao_012</string>
+    <string name="me_status">＋ 状态</string>
+    <string name="me_qr_desc">我的二维码</string>
+    <string name="me_service">服务</string>
+    <string name="me_favorite">收藏</string>
+    <string name="me_moments">朋友圈</string>
+    <string name="me_works">作品</string>
+    <string name="me_works_sub">在这里看我的视频号和公众号</string>
+    <string name="me_shop">小店与卡包</string>
+    <string name="me_shop_sub">[推荐]小米 17 Ultra 手机</string>
+    <string name="me_emoji">表情</string>
+    <string name="me_setting">设置</string>
+
     <string name="header_star">收藏</string>
     <string name="header_plus">添加</string>
     <string name="search_hint">搜索</string>

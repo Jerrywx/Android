@@ -3,7 +3,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/header_bg"
+    android:background="@android:color/black"
     android:orientation="vertical">
 
     <androidx.viewpager2.widget.ViewPager2

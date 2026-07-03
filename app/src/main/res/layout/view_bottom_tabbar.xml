@@ -4,12 +4,12 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="@color/tab_divider" />
+        android:background="@color/me_divider" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="@color/tab_bg"
+        android:background="@color/me_bg"
         android:baselineAligned="false"
         android:orientation="horizontal">
 

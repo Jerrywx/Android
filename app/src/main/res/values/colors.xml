@@ -30,7 +30,32 @@
 
     <color name="bg_contacts">#FFFFF5E1</color>
     <color name="bg_discover">#FFE1ECFF</color>
-    <color name="bg_me">#FFF5E1F0</color>
+    <color name="bg_me">#FF1B1B1B</color>
+
+    <!-- Me 页面（微信"我"深色主题） -->
+    <color name="me_bg">#FF1B1B1B</color>
+    <color name="me_card_bg">#FF232323</color>
+    <color name="me_divider">#FF2F2F2F</color>
+    <color name="me_title">#FFE9E9E9</color>
+    <color name="me_subtitle">#FF8A8A8A</color>
+    <color name="me_hint">#FF6C6C6C</color>
+    <color name="me_arrow">#FF5A5A5A</color>
+    <color name="me_dot">#FFF4433C</color>
+    <color name="me_chip_stroke">#FF4A4A4A</color>
+    <color name="me_avatar_bg">#FF141414</color>
+    <color name="me_avatar_highlight">#FF3C3831</color>
+    <color name="me_icon_service">#FF2ABC5B</color>
+    <color name="me_icon_fav_a">#FFF2A93A</color>
+    <color name="me_icon_fav_b">#FFF25757</color>
+    <color name="me_icon_fav_c">#FF3A86FF</color>
+    <color name="me_icon_moments_1">#FFF2A93A</color>
+    <color name="me_icon_moments_2">#FFF25757</color>
+    <color name="me_icon_moments_3">#FF3A86FF</color>
+    <color name="me_icon_moments_4">#FF2ABC5B</color>
+    <color name="me_icon_works">#FF3A86FF</color>
+    <color name="me_icon_shop">#FFF04A4A</color>
+    <color name="me_icon_emoji">#FFF5B335</color>
+    <color name="me_icon_setting">#FF3A86FF</color>
 
     <color name="rv_bg">#FFF2F4F8</color>
     <color name="rv_card_bg">#FFFFFFFF</color>
